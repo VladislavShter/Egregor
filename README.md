@@ -2,7 +2,7 @@
 
 ## The First Multi-AI Consilium That Beats Mythos and Gemini Ultra — On YOUR Computer
 
-> **The top AI models admit it themselves:** *"When properly configured, Egregor produces results 30-45% stronger than the most expensive single AI model on the market."*
+> **The top AI models admit it themselves:** *"When properly configured, Egregor produces results stronger than the most expensive single AI model on the market."*
 >
 > Not us saying this. The AIs running inside Egregor say it themselves.
 
@@ -55,7 +55,7 @@ Modern AI models have **systematic blind spots**:
 
 When 5 specialized models analyze your problem and a **Moderator** synthesizes the result while a **Devil's Advocate** attacks the consensus — the failure rate drops to 2-5%.
 
-**That's the 30-45% performance gain.** Validated by independent benchmarks and by the AI models themselves when asked to evaluate Egregor's output quality vs single-model output.
+**That's the many performance gain.** Validated by independent benchmarks and by the AI models themselves when asked to evaluate Egregor's output quality vs single-model output.
 
 ---
 
@@ -295,7 +295,7 @@ Egregor changes the math:
 
 ✅ **Frontier capability at indie prices** — $3-10/month for what costs $2,000/month enterprise
 ✅ **Your data stays yours** — AI sees fragments, never the full project
-✅ **Multi-model intelligence** — 30-45% better than any single model
+✅ **Multi-model intelligence** — many better than any single model
 ✅ **Professional tools** — smart contract audit, codebase analysis, document reading, market analysis
 ✅ **No subscription lock-in** — pay only for what you use through OpenRouter
 
