@@ -1,0 +1,735 @@
+# EGREGOR — Guía Completa
+Versión 1.1 | Desarrollador: Vladislav Shter
+
+"No una competencia de mentes — sino una resonancia de intelectos"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ÍNDICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PARTE I. FUNDAMENTOS
+  1. Qué es Egregor
+  2. Filosofía y arquitectura
+  3. Primera ejecución
+
+PARTE II. CONEXIÓN
+  4. Claves API
+     4.1 Qué es OpenRouter
+     4.2 Obtener una clave
+     4.3 Modelos 🆓 gratuitos
+     4.4 Truco: dos claves para ahorrar
+     4.5 Cambiar entre claves
+
+PARTE III. CATÁLOGO DE MODELOS
+  5. Modelos de IA
+  6. IA activas
+
+PARTE IV. MODOS DE TRABAJO
+  7. Cuatro modos principales
+
+PARTE V. EXTENSIONES DEL CONSILIO
+  8. Conmutadores de calidad y ahorro
+
+PARTE VI. PERSONALIZACIÓN
+  9. 📝 Mi Contexto (Soul Document)
+
+PARTE VII. TRABAJO CON ARCHIVOS
+  10. Tipos de archivos
+
+PARTE VIII. INTERFAZ
+  11. Modos de visualización
+  12. Presets del consilio
+
+PARTE IX. PROYECTOS Y DATOS
+  13. Proyectos
+
+PARTE X. FUNCIONES AVANZADAS
+  14. 📊 Estadísticas de tokens y coste
+  15. 📖 Texto Grande
+  16. 📚 Context Compression Engine
+  17. 🧠 Semantic Cache
+
+PARTE XI. REVISIÓN DE CÓDIGO Y AUDITORÍA
+  18. 💻 Pipeline de revisión de código
+  19. ⚙️ Editor del Pipeline
+  20. 📦 Big Project Mode
+
+PARTE XII. CASOS DE USO
+  21. Workflows para diferentes tareas
+
+PARTE XIII. OPTIMIZACIÓN
+  22. Ahorro de tokens y costes
+
+PARTE XIV. SOLUCIÓN DE PROBLEMAS
+  23. FAQ
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE I. FUNDAMENTOS                         ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 1. QUÉ ES EGREGOR ▓▓▓
+
+Egregor es una aplicación de escritorio que ejecuta múltiples modelos de IA (de Anthropic, Google, OpenAI, DeepSeek, Qwen, Meta, Mistral, xAI y otros) en modo de trabajo colectivo. No solo responden en paralelo — debaten, se critican mutuamente, sintetizan un veredicto común, y lo más importante: ven lo que una sola IA pasaría por alto.
+
+Sola, cualquier IA puede cometer errores, alucinar, perder detalles. Pero cuando 4-7 IAs trabajan juntas bajo la guía de un moderador, ocurre "resonancia de intelectos" — cada modelo compensa los puntos débiles de los otros. Esto es especialmente valioso para tareas complejas: auditorías de smart contracts, decisiones estratégicas, revisiones críticas de código, escribir libros, encontrar ideas no convencionales.
+
+Egregor funciona localmente en tu ordenador (Windows, macOS, Linux) y se conecta a los modelos a través de una API unificada — OpenRouter.ai.
+
+
+▓▓▓ 2. FILOSOFÍA Y ARQUITECTURA ▓▓▓
+
+La idea principal no es "comparar opiniones de 5 IAs" sino obtener una respuesta CUALITATIVAMENTE NUEVA nacida de la discusión colectiva.
+
+Capas arquitectónicas:
+• Modelos de IA — el cerebro del sistema (Claude, Gemini, GPT, DeepSeek, etc.)
+• Roles — cada IA tiene su función (desarrollador, auditor de seguridad, creativo, verificador de hechos...)
+• Moderador — la IA principal que sintetiza las respuestas de las demás
+• Extensiones de contexto — Soul Document, Big Text, Project Dossier, Big Project Map
+• Mecanismos de protección — Anti-Groupthink, Red Team, Mapa de Confianza
+
+Egregor es gratuito de instalar. Solo pagas por los tokens realmente usados a través de OpenRouter — normalmente céntimos por petición. Muchos modelos son completamente gratuitos.
+
+
+▓▓▓ 3. PRIMERA EJECUCIÓN ▓▓▓
+
+PASO 1. Obtener una clave API de OpenRouter
+→ Abre https://openrouter.ai (botón 🔗 OpenRouter en la cabecera)
+→ Regístrate (Gmail o email)
+→ Sección "Keys" → "Create Key" → copia
+
+PASO 2. Pega la clave en Egregor
+→ Botón 🔴 Sin clave arriba a la derecha
+→ Pega la clave → Guardar
+→ Debe volverse 🟢 Principal
+
+PASO 3. Rellena "Mi Contexto" (5 minutos — se pagará con creces)
+→ Botón 📝 Mi Contexto en la cabecera
+→ Describe quién eres, qué haces, qué proyectos
+→ Guardar
+→ Ahora todas las IA siempre conocen el contexto y adaptan respuestas
+
+PASO 4. Elige un preset o ensambla tu consilio
+→ En cabecera: "Universal 🌐", "Desarrollo de Código 💻", "Creativo 🎨", "Estrategia 🚀"
+→ O "Más presets ▾" — 25 conjuntos ya hechos
+→ Puedes ensamblar el tuyo: botón "+" en el panel izquierdo
+
+PASO 5. Haz tu primera pregunta
+→ Solo escribe en el campo de abajo
+→ Adjunta archivos con el botón 📎 o arrastrar y soltar
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE II. CONEXIÓN                           ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 4. CLAVES API ▓▓▓
+
+══ 4.1 QUÉ ES OPENROUTER ══
+
+OpenRouter.ai es una pasarela API unificada a más de 300 modelos de IA de todos los proveedores líderes. Una clave — acceso a todo. Los precios coinciden con los de los proveedores originales (o son más baratos a través de proveedores gratuitos en OpenRouter).
+
+En lugar de tener 5 cuentas diferentes (Anthropic, OpenAI, Google, etc.), tienes una clave de OpenRouter y usas cualquier modelo con un solo clic.
+
+══ 4.2 OBTENER UNA CLAVE ══
+
+1. Abre openrouter.ai (o botón 🔗 OpenRouter en Egregor)
+2. Regístrate
+3. Recarga tu saldo (mínimo $5 — dura mucho, o usa solo modelos 🆓)
+4. Sección Keys → Create Key
+5. Copia la clave (empieza con sk-or-v1-...)
+6. Pega en Egregor: botón 🔴 Sin clave → Guardar
+
+══ 4.3 MODELOS 🆓 GRATUITOS ══
+
+OpenRouter ofrece varios modelos gratis (con rate-limits pero suficientes para la mayoría de tareas). En el catálogo de Egregor están marcados con 🆓:
+
+• DeepSeek R1 🆓 — razonamiento profundo, excelente para análisis de código
+• DeepSeek V3 🆓 — propósito general, buena calidad
+• Qwen3 Coder 480B 🆓 — top coder
+• Qwen 3 235B 🆓 — general
+• Llama 4 Maverick 🆓 — de Meta
+• Llama 4 Scout 🆓 — ligero
+• Gemma 3 🆓 — de Google
+• Nemotron 3 Super 🆓 — de Nvidia
+
+Los modelos gratuitos NO dan la calidad de Claude Opus o GPT-4, pero para borradores, preguntas simples, primeras pasadas de auditoría — ahorran excelentemente.
+
+══ 4.4 TRUCO: DOS CLAVES PARA AHORRAR ══
+
+Uno de los trucos más útiles:
+
+• Clave "Principal" — tu cuenta primaria con saldo
+• Clave "Gratis" — cuenta separada SOLO para modelos 🆓
+
+Así los modelos gratuitos trabajan a través de los límites de la segunda cuenta, sin competir con la principal. Duplica el número de peticiones gratuitas por día.
+
+Crea dos cuentas de OpenRouter en diferentes emails. En Egregor: botón 🟢 → + Añadir clave → nómbrala "Gratis".
+
+══ 4.5 CAMBIAR ENTRE CLAVES ══
+
+El botón 🟢 en la cabecera abre el gestor de claves. Haz clic en una clave para activarla — todas las peticiones siguientes pasarán por ella. Conveniente cuando se agota el límite de una.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE III. CATÁLOGO DE MODELOS               ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 5. MODELOS DE IA ▓▓▓
+
+══ 5.1 CATEGORÍAS DE PROVEEDORES ══
+
+En el catálogo de Egregor (se abre con el botón "+" a la izquierda) los modelos están agrupados:
+
+🤖 Anthropic — Claude Opus 4.7, 4.6, Sonnet 4.6, 4.5, Haiku 4.5, 3.7
+🔵 Google — Gemini 3.1 Pro, 3 Pro, 3 Flash, 2.5 Pro, Flash, 2.0 Flash
+🟢 OpenAI — GPT-4.1, GPT-4o, GPT-4o mini, etc.
+🟣 xAI — Grok 4, Grok 3
+🐉 DeepSeek — DeepSeek R1 🆓, V3 🆓, Chat
+🐲 Qwen — Qwen3 Coder 480B 🆓, Qwen 3 235B 🆓
+🦙 Meta — Llama 4 Maverick 🆓, Scout 🆓, Llama 3.x
+🌬️ Mistral — Mistral Large, Codestral, Mixtral
+💎 Otros — Gemma 3 🆓, Nemotron 3 🆓, Command R+, etc.
+
+══ 5.2 LÍDERES POR TIPO DE TAREA ══
+
+RAZONAMIENTO PROFUNDO
+• Claude Opus 4.7 — mejor calidad, más caro
+• DeepSeek R1 🆓 — casi como Opus, gratis
+• GPT-4.1 — buen equilibrio
+
+CÓDIGO Y ARQUITECTURA
+• Qwen3 Coder 480B 🆓 — top coder, gratis
+• Claude Sonnet 4.6 — excelente para código complejo
+
+VELOCIDAD + VOLUMEN
+• Gemini 2.0 Flash — 1M contexto, muy rápido, barato
+• Gemini 2.5 Flash — equilibrio velocidad/calidad
+• Claude Haiku 4.5 — Claude rápido para tareas simples
+
+CREATIVIDAD
+• Claude Sonnet 4.6 — mejor escritor
+• GPT-4o — textos creativos
+• Gemini 3 Pro — pensamiento no convencional
+
+VERIFICACIÓN Y ANÁLISIS
+• Claude Opus 4.7 — precisión de hechos
+• GPT-4.1 — equilibrio precisión/velocidad
+
+══ 5.3 MODELOS GRATUITOS ══
+
+Los modelos gratuitos en OpenRouter tienen rate-limits (~20 peticiones/min, ~200/día por clave). Suficiente para la mayoría de tareas. Estrategia:
+
+1. Usa modelos 🆓 como PRIMER NIVEL — para respuestas en borrador
+2. Si el resultado no satisface — cambia a pago
+3. Usa dos claves (ver 4.4) para duplicar el límite diario
+
+══ 5.4 MODELOS PERSONALIZADOS DE OPENROUTER ══
+
+El catálogo de Egregor se actualiza con nuevas versiones. Pero si OpenRouter ha añadido un nuevo modelo no en el catálogo — puedes usarlo manualmente:
+
+1. En el catálogo de Egregor (o Editor del Pipeline) selecciona "＋ Introducir cualquier ID de modelo OpenRouter..."
+2. Introduce ID como provider/model-name (ej. anthropic/claude-opus-5)
+3. Egregor lo guardará y comenzará a usarlo
+
+
+▓▓▓ 6. IA ACTIVAS ▓▓▓
+
+══ 6.1 AÑADIR Y QUITAR ══
+
+Izquierda — panel de IA activas (lo que participa actualmente en el consilio).
+
+Añadir:
+• Botón "+" abajo del panel → elegir del catálogo
+• O cargar un preset ya hecho en la cabecera
+
+Quitar:
+• Clic en IA → botón 🗑 a la derecha
+
+Desactivar temporalmente (sin quitar):
+• Clic en IA → conmutador "Activo"
+
+Un consilio puede tener de 1 a 10 IAs. Óptimo 3-5 para calidad y velocidad.
+
+══ 6.2 ROLES — QUÉ SIGNIFICAN ══
+
+Cada IA tiene un ROL — su máscara profesional. El rol afecta:
+• Estilo de respuesta (creativo / técnico / crítico)
+• Lo que la IA busca en la pregunta
+• Cómo la IA se comporta en discusión
+
+Roles principales:
+👑 Moderador (mod) — sintetiza respuestas de otros, da veredicto final
+💻 Desarrollador (dev) — análisis profundo de código, arquitectura
+🛡️ Seguridad (security) — búsqueda de vulnerabilidades, auditoría
+🎨 Creativo (creative) — ideas no convencionales, reformulación
+📋 Auditor (auditor) — análisis crítico
+🔍 Verificador (factcheck) — precisión de información, fuentes
+💼 Analista de negocio (business) — visión de mercado, ROI
+🎭 Abogado del diablo (devil) — ataque al consenso
+👁️ Observador (observer) — posición neutral
+
+══ 6.3 MODERADOR — EL SINTETIZADOR PRINCIPAL ══
+
+Una de las IAs siempre está marcada con 👑 — este es el MODERADOR. Él:
+• Recibe respuestas de todos los demás
+• Analiza contradicciones y acuerdos
+• Emite la síntesis final
+• En modo Code Review — escribe el veredicto final
+
+Recomendación: pon el modelo más fuerte como moderador — Claude Opus 4.7 o Sonnet 4.6.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE IV. MODOS DE TRABAJO                   ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 7. CUATRO MODOS PRINCIPALES ▓▓▓
+
+══ 7.1 🤖 MODO INDIVIDUAL ══
+
+Se activa automáticamente cuando solo hay una IA en el consilio. Funciona como un chat regular tipo ChatGPT.
+
+══ 7.2 📊 ANÁLISIS COLECTIVO ══
+
+Conmutador en la toolbar. Una ronda: todas las IAs responden tu pregunta en paralelo, el moderador hace la síntesis final.
+
+══ 7.3 🏛️ CONSILIO EN VIVO ══
+
+Modo principal de Egregor. Varias rondas de discusión:
+
+Ronda 1: Cada IA responde tu pregunta con su rol.
+Ronda 2: Cada IA lee lo que otros dijeron, critica, complementa, está de acuerdo.
+Ronda 3 (opcional): Búsqueda de consenso.
+Final: El moderador sintetiza todo en el veredicto final.
+
+══ 7.4 💻 PIPELINE DE REVISIÓN DE CÓDIGO ══
+
+Modo especial para auditoría de código (ver PARTE XI, sección 18). 5 IAs trabajan estrictamente en secuencia, cada una ve los resultados anteriores.
+
+══ 7.5 📖 TEXTO GRANDE (EXTENSIÓN) ══
+
+No es un modo sino una EXTENSIÓN de contexto. Para documentos muy grandes (>40.000 caracteres, ~100+ páginas).
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE V. EXTENSIONES DEL CONSILIO            ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 8. CONMUTADORES DE CALIDAD Y AHORRO ▓▓▓
+
+══ 8.1 SECUENCIAL ══
+
+Por defecto todas las IAs responden EN PARALELO. Activa "Secuencial" para que respondan una por una.
+
+══ 8.2 💰 MODO ECONOMÍA ══
+
+Activado → consilio más corto y barato:
+• 2 rondas fijas
+• Participantes escriben ~150 palabras
+• Moderador escribe ~500 palabras
+• Ahorro de tokens ~75%
+
+Incompatible con Anti-Groupthink.
+
+══ 8.3 🛡️ ANTI-GROUPTHINK ══
+
+Protección principal contra pensamiento grupal. Activa dos mecanismos:
+
+🎭 Primera ronda ciega — todos responden SIN ver el rol. Opiniones independientes limpias.
+
+⚔️ Abogado del diablo rotativo — en cada ronda un participante se vuelve crítico temporalmente.
+
+⚠️ Cuesta aproximadamente +30% tokens.
+
+══ 8.4 🛡️ RED TEAM ══
+
+Subopción de Anti-Groupthink. Ronda final de ataque al consenso establecido. ⚠️ Añade ~15% tokens.
+
+══ 8.5 📊 MAPA DE CONFIANZA ══
+
+Después de cada veredicto final el moderador evalúa la confianza del consilio en escala 1-5:
+
+🟢 5/5 — acuerdo total
+🟢 4/5 — acuerdo fuerte
+🟡 3/5 — acuerdo moderado
+🟠 2/5 — acuerdo débil
+🔴 1/5 — sin acuerdo
+
+══ 8.6 🔗 OPENROUTER ══
+
+Botón para navegación rápida a openrouter.ai/models — catálogo de todos los 300+ modelos.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE VI. PERSONALIZACIÓN                    ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 9. 📝 MI CONTEXTO (SOUL DOCUMENT) ▓▓▓
+
+Soul Document (o "Mi Contexto") es tu tarjeta de visita para todas las IAs. Rellénalo una vez — y cualquier IA en cualquier proyecto sabe quién eres, qué haces, tu bagaje.
+
+Sin él la IA responde en vacío cada vez — consejos generales para "usuario promedio". Con él — consejos específicos para tu situación.
+
+Útil especificar:
+• Nombre y campo de actividad
+• Nivel de experiencia (principiante / pro / experto en algo)
+• Proyectos activos
+• Tecnologías favoritas, lenguajes de programación
+• Estilo de comunicación
+• Cualquier característica personal
+
+Longitud — de 200 a 2000 palabras.
+
+Soul Document se adjunta automáticamente a CADA prompt del sistema de cualquier IA en Egregor.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE VII. TRABAJO CON ARCHIVOS              ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 10. TIPOS DE ARCHIVOS ▓▓▓
+
+══ 10.1 TEXTO Y CÓDIGO ══
+
+Todos los formatos principales soportados:
+• Documentación — .md, .txt, .html, .xml, .json, .yaml
+• JavaScript / TypeScript, Python, Solidity, Rust, Go
+• C/C++, Java, Kotlin, Swift, PHP, Ruby
+• Web frameworks — .vue, .svelte, .astro
+
+Tamaño hasta 500 KB por archivo, hasta 12.000 caracteres leídos en contexto.
+
+══ 10.2 PDF Y DOCUMENTOS OFFICE ══
+
+PDF completamente soportado. Word (.docx) y PowerPoint (.pptx) — parcialmente.
+
+══ 10.3 IMÁGENES ══
+
+Soportadas .png, .jpg, .jpeg, .gif, .webp. IAs con vision (Claude, GPT-4o, Gemini) analizarán imágenes.
+
+══ 10.4 LIBROS (EPUB, FB2, RTF) ══
+
+Egregor lee formatos de libros. Para libros grandes se ofrece automáticamente el modo 📖 Texto Grande.
+
+══ 10.5 ARCHIVOS COMPRIMIDOS — ZIP, RAR, 7Z, TAR, GZ ══
+
+A través de node-7z + 7zip-bin todos los formatos principales soportados. Archivos anidados hasta 3 niveles. Límite de archivos — 200.
+
+══ 10.6 DRAG-AND-DROP Y BOTÓN 📎 ══
+
+Dos formas: botón 📎 o arrastrar al ventana. Soportadas carpetas completas.
+
+⚠️ IMPORTANTE para Electron 32+: con drag-and-drop de archivos comprimidos en Windows usar botón 📎.
+
+Límite: hasta 15 archivos simultáneamente.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE VIII. INTERFAZ                         ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 11. MODOS DE VISUALIZACIÓN ▓▓▓
+
+🪟 CUADRÍCULA — cada IA en su celda separada, CSS Grid (1-4 columnas). Veredicto final — ancho completo arriba. Rondas como pestañas.
+
+📋 LISTA — modo lineal clásico, todos los mensajes de arriba a abajo.
+
+Conmutador 🪟/📋 en cabecera derecha. Cuadrícula por defecto.
+
+
+▓▓▓ 12. PRESETS DEL CONSILIO ▓▓▓
+
+4 presets en cabecera: 🌐 Universal, 💻 Desarrollo de Código, 🎨 Creativo, 🚀 Estrategia.
+
+"Más presets ▾" — otros 25 presets para tareas especializadas.
+
+Creación de presets propios — en roadmap v1.5. Alternativa: guardar tu consilio como proyecto.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE IX. PROYECTOS Y DATOS                  ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 13. PROYECTOS ▓▓▓
+
+Proyecto es un contexto de trabajo guardado: composición del consilio, historial de mensajes, Project Dossier, Big Project Map, Semantic Cache, archivos subidos.
+
+Los proyectos se guardan automáticamente en localStorage del navegador. Izquierda — panel de proyectos. Clic cambia.
+
+"Guardar en archivo" exporta TODO en un archivo JSON. Útil para backup, transferencia, restauración.
+
+Eliminar: clic en proyecto → 🗑.
+
+⚠️ IMPORTANTE: localStorage está limitado (~5-10 MB). Regularmente exporta y limpia.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE X. FUNCIONES AVANZADAS                 ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 14. 📊 ESTADÍSTICAS DE TOKENS Y COSTE ▓▓▓
+
+Botón 📊 Estadísticas abre modal con contabilidad detallada: qué modelo usó cuántos tokens, cuánto costó en dólares. Agrupación por días, semanas, meses. Top modelos. Gráfico de tendencias.
+
+Los precios se cargan automáticamente desde openrouter.ai/api una vez al día.
+
+Exportación a CSV posible.
+
+
+▓▓▓ 15. 📖 TEXTO GRANDE ▓▓▓
+
+Para documentos muy grandes — libros, contratos largos, documentación técnica, tesis. Más de ~40.000 caracteres.
+
+Al activar 📖 Texto Grande:
+1. Una IA (Gemini 2.0 Flash por defecto, 1M tokens de contexto) lee el documento COMPLETO
+2. Crea un resumen estructurado por 7 secciones
+3. Otras IAs trabajan con el resumen
+
+Al adjuntar un archivo >40.000 caracteres Egregor mismo ofrece activar el modo.
+
+
+▓▓▓ 16. 📚 CONTEXT COMPRESSION ENGINE ▓▓▓
+
+Project Dossier — un resumen compacto de toda la conversación en el proyecto. Creado por una IA (guardián) y sustituido en el contexto en lugar del historial completo.
+
+Cuándo activar: proyectos largos (30+ mensajes), cuando notas que las respuestas se vuelven más caras.
+
+Guardián por defecto: Gemini 2.0 Flash. Se puede cambiar en configuración 📚 Compresión → ⚙️.
+
+Estructura del dossier (5 secciones): Temas principales, Decisiones, Preguntas abiertas, Hechos clave, Dinámica.
+
+Dossier se actualiza automáticamente cada 6 mensajes o cuando el contexto supera 50.000 tokens.
+
+Ahorro real: 10-20× tokens en proyectos largos.
+
+
+▓▓▓ 17. 🧠 SEMANTIC CACHE ▓▓▓
+
+Si haces una pregunta similar a una anterior — Egregor puede devolver la misma respuesta SIN llamada a la API. Coste cero, respuesta instantánea.
+
+Cada pregunta se convierte en un vector de ~1.500 números a través del modelo embeddings. Preguntas similares tienen vectores cercanos.
+
+Umbrales:
+• >95% — silenciosamente desde caché 🔁
+• 85-94% — pregunta "¿usar respuesta anterior?"
+• <85% — petición API normal
+
+Caché desactivada para: peticiones con archivos adjuntos, palabras dependientes del tiempo ("hoy", "ahora", "noticias", "tasa").
+
+Botón 🧠 Cache ✓ muestra contador de aciertos. TTL — 30 días. Límite — 500 registros por proyecto.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE XI. REVISIÓN DE CÓDIGO Y AUDITORÍA     ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 18. 💻 PIPELINE DE REVISIÓN DE CÓDIGO ▓▓▓
+
+En consilio regular las IAs trabajan EN PARALELO. Pero para código se necesita diferente: revisión de código requiere cadena secuencial de especialistas.
+
+Pipeline de revisión de código es el cuarto modo de trabajo (botón 💻 Revisión de código). 5 IAs trabajan estrictamente en secuencia, cada una ve resultados anteriores.
+
+CINCO PASOS DEL PIPELINE:
+
+PASO 1. ✍️ REASONING — análisis profundo
+¿Qué hace el código? Arquitectura. Suposiciones. Problemas lógicos. Rendimiento.
+
+PASO 2. 🛡️ SECURITY — búsqueda de vulnerabilidades
+Smart contracts: reentrancy, integer overflow, access control. Web: SQL injection, XSS, CSRF.
+
+PASO 3. 🔧 ALTERNATIVE — implementación alternativa
+Reescribir áreas problemáticas.
+
+PASO 4. ⚖️ COMPARISON — comparación
+Dónde la alternativa es mejor/peor.
+
+PASO 5. 👑 FINAL VERDICT — recomendaciones finales
+Informe estructurado:
+🔴 Cambios críticos
+🟡 Recomendados
+🟢 Opcionales
+✅ Dejar como está
+💡 Código final
+
+DISTRIBUCIÓN DE MODELOS PARA AUDITORÍA DE SMART CONTRACT:
+
+PASO 1 → DeepSeek R1 🆓
+PASO 2 → Claude Sonnet 4.6
+PASO 3 → Qwen3 Coder 480B 🆓
+PASO 4 → GPT-4.1
+PASO 5 → Claude Opus 4.7
+
+3 de 5 modelos — gratuitos. Coste total ~$0,30-0,50 vs $5.000-50.000 en CertiK.
+
+
+▓▓▓ 19. ⚙️ EDITOR DEL PIPELINE ▓▓▓
+
+Botón ⚙️ junto a 💻 Revisión de código abre configuración del pipeline. Dos modos:
+
+🤖 MODO AUTOMÁTICO (por defecto) — Egregor mismo elige IAs del consilio activo por roles.
+
+✋ CONFIGURACIÓN MANUAL — asignas modelos explícitamente a cada paso.
+
+En modo manual cada paso tiene un dropdown con tres grupos: Activos en el consilio, catálogo completo, OpenRouter (cualquier ID).
+
+⚠️ Paso final 👑 no se puede desactivar.
+
+Configuración se guarda en localStorage.
+
+
+▓▓▓ 20. 📦 BIG PROJECT MODE — ANÁLISIS DE CODEBASE ▓▓▓
+
+Modo regular de archivo trunca cada archivo a 12.000 caracteres. Auditoría real de smart contract requiere TODOS los archivos completos.
+
+Big Project Mode resuelve esto. Al activarlo:
+✅ Todos los archivos leídos COMPLETOS
+✅ Análisis de imports — grafo de dependencias
+✅ Guardián escribe "Mapa del Proyecto"
+✅ Chunking por funciones, embeddings
+✅ Búsqueda RAG de código relevante
+✅ Integración con pipeline de revisión
+
+ETAPA 1: INDEXACIÓN Y MAPA DEL PROYECTO
+Archivo se descomprime en %TEMP%/egregor_big_projects/{projectId}/src/.
+Todos los archivos de código leídos completos (límite 2 MB por archivo, 50 MB por proyecto, 500 archivos).
+Análisis de import para Solidity, JS/TS, Python, Rust, Go.
+Guardián (Gemini 2.0 Flash) escribe Mapa del Proyecto (7 secciones).
+
+ETAPA 2: CHUNKING Y EMBEDDINGS (RAG)
+Cada archivo se divide en funciones/métodos/contratos.
+Para cada chunk se genera un vector (~$0,0001 por chunk).
+En cada petición: cosine similarity, top-8 chunks, más funciones relacionadas por grafo.
+
+ETAPA 3: INTEGRACIÓN CON REVISIÓN DE CÓDIGO
+En modo 💻 Revisión con Big Project activo — cada paso del pipeline hace SU PROPIA búsqueda RAG por su especialización.
+
+LENGUAJES SOPORTADOS:
+Análisis de imports: Solidity, JavaScript, TypeScript, Python, Rust, Go.
+Chunking por funciones: mismos lenguajes.
+Lectura de archivos: Java, Kotlin, Swift, C/C++, C#, Dart, PHP, Ruby, Lua, Shell, SQL y más.
+
+LÍMITES:
+• Archivos por proyecto — 500
+• Tamaño de archivo único — 2 MB
+• Tamaño total del proyecto — 50 MB
+• Anidamiento de archivos — 3 niveles
+• Ignorados: node_modules, .git, dist, build, target, .venv, __pycache__
+
+GUARDADO ENTRE SESIONES:
+Después de indexación se almacena src/, index.json, embeddings.json.
+Al cambiar de proyecto: índice se restaura, embeddings se cargan en memoria.
+
+Limpieza: botón 🗑 en panel Big Project.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE XII. CASOS DE USO                      ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 21. WORKFLOWS PARA DIFERENTES TAREAS ▓▓▓
+
+══ 21.1 AUDITORÍA DE SMART CONTRACT ══
+1. Nuevo proyecto "Auditoría [nombre contrato]"
+2. Preset "Desarrollo de Código 💻"
+3. Activar 💻 Revisión + 📦 Big Project
+4. Adjuntar archivo zip con contratos
+5. Esperar indexación (~30 sec)
+6. ⚙️ → ✋ Manual, asignar modelos fuertes
+7. Activar 🛡️ Anti-Groupthink + 🛡️ Red Team
+8. "Realizar auditoría completa de seguridad de todos los contratos"
+Coste: ~$0,30-0,50. Calidad: profesional.
+
+══ 21.2 DESARROLLO DE NUEVO PRODUCTO ══
+1. Rellenar 📝 Mi Contexto
+2. Preset "Estrategia 🚀"
+3. 🏛️ Consilio + 🛡️ Anti-Groupthink
+4. Pregunta abierta, desarrollar discusión
+5. A los 30+ mensajes — activar 📚 Compresión
+
+══ 21.3 ANÁLISIS DE DOCUMENTO LARGO ══
+1. Abrir documento — Egregor ofrece 📖 Texto Grande
+2. Aceptar — Gemini lee y crea resumen
+3. Hacer preguntas — todas las IAs ven el resumen
+
+══ 21.4 REVISIÓN DE CÓDIGO DE PR CRÍTICO ══
+1. Adjuntar archivos modificados
+2. Activar 💻 Revisión de código
+3. Con muchos cambios — añadir 📦 Big Project
+
+══ 21.5 PENSAMIENTO CREATIVO ══
+1. Preset "Creativo 🎨"
+2. 🏛️ Consilio + 🛡️ Anti-Groupthink
+3. Pregunta abierta: "Idea 10 aplicaciones inusuales de X"
+
+══ 21.6 DECISIÓN IMPORTANTE ══
+1. 🏛️ Consilio
+2. 🛡️ Anti-Groupthink + 🛡️ Red Team — obligatorio
+3. 📊 Mapa de Confianza indica cuánto confiar
+4. Con 🟠 2/5 o 🔴 1/5 — refinar pregunta o consultar expertos
+
+Egregor es herramienta de amplificación de tu pensamiento, no reemplazo. Decisión final siempre tuya.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE XIII. OPTIMIZACIÓN                     ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 22. AHORRO DE TOKENS Y COSTES ▓▓▓
+
+ESTRATEGIAS DE AHORRO:
+
+REGLA 1: Modelos gratuitos como primer nivel.
+REGLA 2: 💰 Economía para preguntas simples.
+REGLA 3: 📚 Compresión en proyectos largos.
+REGLA 4: 🧠 Caché siempre activo.
+REGLA 5: Soul Document — obligatorio.
+REGLA 6: No usar Big Project Mode innecesariamente.
+REGLA 7: Dos claves OpenRouter.
+
+CUÁNDO USAR QUÉ:
+
+Tarea simple → Modo individual + modelo 🆓. ~$0.
+Tarea media → 📊 Análisis + 3-4 modelos. ~$0,01-0,05.
+Tarea compleja → 🏛️ Consilio + 5 modelos. ~$0,05-0,30.
+Tarea crítica → 🏛️ + 🛡️ + Red Team + 📊 Mapa. ~$0,20-1,00.
+Auditoría de código → 💻 + 📦 Big Project. ~$0,30-2,00.
+Lectura de libro → 📖 + Gemini. ~$0,05.
+
+
+╔══════════════════════════════════════════════╗
+║  PARTE XIV. SOLUCIÓN DE PROBLEMAS             ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 23. FAQ ▓▓▓
+
+"Insufficient credits" → Saldo OpenRouter agotado. Recarga o usa modelos 🆓.
+
+"Rate limit exceeded" → Espera o cambia clave.
+
+"Model not found" → Error tipográfico o modelo eliminado.
+
+Egregor tarda en arrancar → Primer arranque 5-7 sec normal.
+
+Campo de entrada "se congela" con archivo grande → Indexación Big Project en curso.
+
+Botones no visibles → Ventana demasiado estrecha.
+
+Modelos gratuitos no funcionan → Límites ~20/min, ~200/día. Usar dos claves.
+
+Chat se vuelve lento/caro → Contexto creció. Activar 📚 Compresión.
+
+Big Project no indexa → Verifica que archivo contiene código y los límites.
+
+PDF no se parsea → Verificar pdf-parse instalado. En Windows usar 📎.
+
+Drag-and-drop archivos en Windows → Bug Electron 32+. Usar 📎.
+
+Proyecto desapareció → Datos en localStorage. Regularmente "Guardar en archivo".
+
+═══════════════════════════════════════════════════
+FIN DE LA GUÍA. Versión 1.1 | Vladislav Shter
+═══════════════════════════════════════════════════

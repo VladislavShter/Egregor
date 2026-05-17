@@ -1,0 +1,731 @@
+# EGREGOR — Vollständige Anleitung
+Version 1.1 | Entwickler: Vladislav Shter
+
+„Kein Wettbewerb der Köpfe — sondern Resonanz der Intellekte"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INHALTSVERZEICHNIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEIL I. GRUNDLAGEN
+  1. Was ist Egregor
+  2. Philosophie und Architektur
+  3. Erster Start — wo anfangen
+
+TEIL II. VERBINDUNG
+  4. API-Schlüssel
+     4.1 Was ist OpenRouter
+     4.2 Schlüssel beschaffen
+     4.3 Kostenlose 🆓 Modelle
+     4.4 Trick: zwei Schlüssel für Sparsamkeit
+     4.5 Zwischen Schlüsseln wechseln
+
+TEIL III. MODELL-KATALOG
+  5. KI-Modelle
+     5.1 Anbieter-Kategorien
+     5.2 Spitzenreiter nach Aufgabentyp
+     5.3 Kostenlose Modelle
+     5.4 Benutzerdefinierte OpenRouter-Modelle
+  6. Aktive KI
+     6.1 Hinzufügen und Entfernen
+     6.2 Rollen — was sie bedeuten
+     6.3 Moderator — der Haupt-Synthesizer
+
+TEIL IV. ARBEITSMODI
+  7. Vier Hauptmodi
+
+TEIL V. KONSIL-ERWEITERUNGEN
+  8. Qualitäts- und Spar-Schalter
+
+TEIL VI. PERSONALISIERUNG
+  9. 📝 Mein Kontext (Soul Document)
+
+TEIL VII. ARBEIT MIT DATEIEN
+  10. Dateitypen
+
+TEIL VIII. OBERFLÄCHE
+  11. Anzeigemodi
+  12. Konsil-Vorlagen
+
+TEIL IX. PROJEKTE UND DATEN
+  13. Projekte
+
+TEIL X. ERWEITERTE FUNKTIONEN
+  14. 📊 Token- und Kostenstatistik
+  15. 📖 Großer Text
+  16. 📚 Context Compression Engine
+  17. 🧠 Semantic Cache
+
+TEIL XI. CODE-REVIEW UND AUDIT
+  18. 💻 Code-Review-Pipeline
+  19. ⚙️ Pipeline-Editor
+  20. 📦 Big Project Mode
+
+TEIL XII. ANWENDUNGSFÄLLE
+  21. Workflows für verschiedene Aufgaben
+
+TEIL XIII. OPTIMIERUNG
+  22. Token- und Kostenersparnis
+
+TEIL XIV. FEHLERBEHEBUNG
+  23. FAQ und Fehlerlösung
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL I. GRUNDLAGEN                           ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 1. WAS IST EGREGOR ▓▓▓
+
+Egregor ist eine Desktop-Anwendung, die mehrere KI-Modelle (von Anthropic, Google, OpenAI, DeepSeek, Qwen, Meta, Mistral, xAI und anderen) im Modus der kollektiven Arbeit ausführt. Sie antworten nicht einfach parallel — sie debattieren, kritisieren einander, synthetisieren ein gemeinsames Urteil und vor allem: sie sehen, was eine einzelne KI übersehen würde.
+
+Allein kann jede KI Fehler machen, halluzinieren, Details übersehen. Aber wenn 4-7 KIs unter der Leitung eines Moderators zusammenarbeiten, entsteht „Intellekt-Resonanz" — jedes Modell kompensiert die Schwächen anderer. Das ist besonders wertvoll für komplexe Aufgaben: Smart-Contract-Audits, strategische Entscheidungen, kritische Code-Reviews, Bücher schreiben, unkonventionelle Ideen finden.
+
+Egregor läuft lokal auf deinem Computer (Windows, macOS, Linux) und verbindet sich mit Modellen über eine einheitliche API — OpenRouter.ai.
+
+
+▓▓▓ 2. PHILOSOPHIE UND ARCHITEKTUR ▓▓▓
+
+Die Hauptidee ist nicht „die Meinungen von 5 KIs zu vergleichen", sondern eine QUALITATIV NEUE Antwort zu erhalten, die aus kollektiver Diskussion entsteht.
+
+Architektonische Schichten:
+• KI-Modelle — das Gehirn des Systems
+• Rollen — jede KI hat ihre Funktion (Entwickler, Sicherheitsauditor, Kreativer, Faktenprüfer...)
+• Moderator — die Haupt-KI, die Antworten anderer synthetisiert
+• Kontext-Erweiterungen — Soul Document, Big Text, Project Dossier, Big Project Map
+• Schutzmechanismen — Anti-Groupthink, Red Team, Vertrauenskarte
+
+Egregor ist kostenlos zu installieren. Du zahlst nur für tatsächlich verbrauchte Tokens über OpenRouter — normalerweise Cent pro Anfrage. Viele Modelle sind komplett kostenlos.
+
+
+▓▓▓ 3. ERSTER START ▓▓▓
+
+SCHRITT 1. Hol dir einen OpenRouter-API-Schlüssel
+→ Öffne https://openrouter.ai (🔗 OpenRouter-Schaltfläche in der Kopfzeile)
+→ Registriere dich (Gmail oder E-Mail)
+→ Abschnitt „Keys" → „Create Key" → kopieren
+
+SCHRITT 2. Schlüssel in Egregor einfügen
+→ 🔴 Kein-Schlüssel-Schaltfläche oben rechts
+→ Schlüssel einfügen → Speichern
+→ Sollte zu 🟢 Haupt werden
+
+SCHRITT 3. „Mein Kontext" ausfüllen (5 Minuten — zahlt sich vielfach aus)
+→ 📝 Mein-Kontext-Schaltfläche in der Kopfzeile
+→ Beschreibe, wer du bist, was du tust, welche Projekte
+→ Speichern
+→ Jetzt kennen alle KIs immer den Kontext und passen Antworten an
+
+SCHRITT 4. Wähle eine Vorlage oder stelle dein Konsil zusammen
+→ In der Kopfzeile: „Universal 🌐", „Code-Entwicklung 💻", „Kreativ 🎨", „Strategie 🚀"
+→ Oder „Weitere Vorlagen ▾" — 25 vorgefertigte Sets
+→ Du kannst eigenes zusammenstellen: „+"-Schaltfläche im linken Panel
+
+SCHRITT 5. Stelle deine erste Frage
+→ Tippe einfach ins Feld unten
+→ Hänge Dateien mit 📎-Schaltfläche oder Drag-and-Drop an
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL II. VERBINDUNG                          ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 4. API-SCHLÜSSEL ▓▓▓
+
+══ 4.1 WAS IST OPENROUTER ══
+
+OpenRouter.ai ist ein einheitliches API-Gateway zu 300+ KI-Modellen aller führenden Anbieter. Ein Schlüssel — Zugang zu allem. Preise entsprechen denen der ursprünglichen Anbieter (oder günstiger über kostenlose Anbieter auf OpenRouter).
+
+Statt 5 verschiedener Konten (Anthropic, OpenAI, Google, etc.) hast du einen OpenRouter-Schlüssel und nutzt alle Modelle mit einem Klick.
+
+══ 4.2 SCHLÜSSEL BESCHAFFEN ══
+
+1. Öffne openrouter.ai (oder 🔗 OpenRouter-Schaltfläche in Egregor)
+2. Registriere dich
+3. Lade dein Guthaben auf (Minimum $5 — hält lange, oder nutze nur 🆓-Modelle)
+4. Abschnitt „Keys" → „Create Key"
+5. Schlüssel kopieren (beginnt mit sk-or-v1-...)
+6. In Egregor einfügen: 🔴 Kein-Schlüssel-Schaltfläche → Speichern
+
+══ 4.3 KOSTENLOSE 🆓 MODELLE ══
+
+OpenRouter bietet mehrere Modelle kostenlos (mit Rate-Limits, aber genug für die meisten Aufgaben). Im Egregor-Katalog sind sie mit 🆓 markiert:
+
+• DeepSeek R1 🆓 — tiefes Reasoning, gut für Code-Analyse
+• DeepSeek V3 🆓 — Allzweck, gute Qualität
+• Qwen3 Coder 480B 🆓 — Top-Coder
+• Qwen 3 235B 🆓 — allgemein
+• Llama 4 Maverick 🆓 — von Meta
+• Llama 4 Scout 🆓 — leicht
+• Gemma 3 🆓 — von Google
+• Nemotron 3 Super 🆓 — von Nvidia
+
+Kostenlose Modelle bieten NICHT die Qualität von Claude Opus oder GPT-4, aber für Entwürfe, einfache Fragen, erste Audit-Durchgänge — sparen sie hervorragend.
+
+══ 4.4 TRICK: ZWEI SCHLÜSSEL FÜR SPARSAMKEIT ══
+
+Einer der nützlichsten Tricks:
+
+• „Haupt"-Schlüssel — dein Hauptkonto mit Guthaben
+• „Frei"-Schlüssel — separates Konto NUR für 🆓-Modelle
+
+So funktionieren kostenlose Modelle über die Limits des zweiten Kontos und konkurrieren nicht mit deinem Hauptkonto. Verdoppelt die Anzahl der kostenlosen Anfragen pro Tag.
+
+══ 4.5 ZWISCHEN SCHLÜSSELN WECHSELN ══
+
+Die 🟢-Schaltfläche in der Kopfzeile öffnet den Schlüsselmanager. Klicke auf einen Schlüssel, um ihn aktiv zu machen — alle nachfolgenden Anfragen gehen durch ihn. Praktisch, wenn das Limit eines erschöpft ist.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL III. MODELL-KATALOG                     ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 5. KI-MODELLE ▓▓▓
+
+══ 5.1 ANBIETER-KATEGORIEN ══
+
+Im Egregor-Katalog (öffnet sich über die „+"-Schaltfläche links) sind die Modelle gruppiert:
+
+🤖 Anthropic — Claude Opus 4.7, 4.6, Sonnet 4.6, 4.5, Haiku 4.5, 3.7
+🔵 Google — Gemini 3.1 Pro, 3 Pro, 3 Flash, 2.5 Pro, Flash, 2.0 Flash
+🟢 OpenAI — GPT-4.1, GPT-4o, GPT-4o mini, etc.
+🟣 xAI — Grok 4, Grok 3
+🐉 DeepSeek — DeepSeek R1 🆓, V3 🆓, Chat
+🐲 Qwen — Qwen3 Coder 480B 🆓, Qwen 3 235B 🆓, Qwen 2.5
+🦙 Meta — Llama 4 Maverick 🆓, Scout 🆓, Llama 3.x
+🌬️ Mistral — Mistral Large, Codestral, Mixtral
+💎 Andere — Gemma 3 🆓, Nemotron 3 🆓, Command R+, etc.
+
+══ 5.2 SPITZENREITER NACH AUFGABENTYP ══
+
+Jede Aufgabe hat ihren König:
+
+TIEFES REASONING
+• Claude Opus 4.7 — beste Qualität, am teuersten
+• DeepSeek R1 🆓 — fast wie Opus, kostenlos
+• GPT-4.1 — gute Balance
+
+CODE UND ARCHITEKTUR
+• Qwen3 Coder 480B 🆓 — Top-Coder, kostenlos
+• Claude Sonnet 4.6 — ausgezeichnet für komplexen Code
+• DeepSeek V3 🆓 — für allgemeine Code-Aufgaben
+
+GESCHWINDIGKEIT + VOLUMEN
+• Gemini 2.0 Flash — 1M Kontext, sehr schnell, günstig
+• Gemini 2.5 Flash — Balance aus Geschwindigkeit und Qualität
+• Claude Haiku 4.5 — schneller Claude für einfache Aufgaben
+
+KREATIVITÄT
+• Claude Sonnet 4.6 — bester Schriftsteller
+• GPT-4o — kreative Texte
+• Gemini 3 Pro — unkonventionelles Denken
+
+FAKTENPRÜFUNG UND ANALYSE
+• Claude Opus 4.7 — Faktengenauigkeit
+• GPT-4.1 — Balance zwischen Genauigkeit und Geschwindigkeit
+
+══ 5.3 KOSTENLOSE MODELLE ══
+
+Kostenlose Modelle bei OpenRouter haben Rate-Limits (~20 Anfragen/Min, ~200/Tag pro Schlüssel). Genug für die meisten Aufgaben. Strategie:
+
+1. Nutze 🆓-Modelle als ERSTE STUFE — für Entwurfsantworten
+2. Wenn das Ergebnis nicht zufriedenstellt — wechsle zu bezahlten
+3. Nutze zwei Schlüssel (siehe 4.4), um das Tageslimit zu verdoppeln
+
+══ 5.4 BENUTZERDEFINIERTE OPENROUTER-MODELLE ══
+
+Der Egregor-Katalog wird mit neuen Versionen aktualisiert. Aber wenn OpenRouter ein neues Modell hinzugefügt hat, das noch nicht im Katalog ist — kannst du es manuell verwenden:
+
+1. Im Egregor-Katalog (oder Pipeline-Editor) wähle „＋ Beliebige OpenRouter-Modell-ID eingeben..."
+2. Gib die ID als anbieter/modell-name ein (z.B. anthropic/claude-opus-5)
+3. Egregor wird sie speichern und verwenden
+
+
+▓▓▓ 6. AKTIVE KI ▓▓▓
+
+══ 6.1 HINZUFÜGEN UND ENTFERNEN ══
+
+Links — Panel der aktiven KI. Hinzufügen über „+", entfernen über 🗑. Vorübergehend deaktivieren — „Aktiv"-Schalter.
+
+Ein Konsil kann 1 bis 10 KIs haben. Optimal sind 3-5 für Qualität und Geschwindigkeit.
+
+══ 6.2 ROLLEN ══
+
+Jede KI hat eine ROLLE — ihre professionelle Maske:
+
+👑 Moderator — synthetisiert Antworten anderer
+💻 Entwickler — tiefe Code-Analyse
+🛡️ Sicherheit — Schwachstellensuche
+🎨 Kreativ — unkonventionelle Ideen
+📋 Auditor — kritische Analyse
+🔍 Faktenprüfer — Informationsgenauigkeit
+💼 Business-Analyst — Marktsicht, ROI
+🎭 Anwalt des Teufels — Angriff auf Konsens
+👁️ Beobachter — neutrale Position
+
+══ 6.3 MODERATOR ══
+
+Eine der KIs ist immer mit 👑 markiert. Er erhält Antworten von allen, analysiert sie und gibt die finale Synthese aus.
+
+Empfehlung: setze das stärkste Modell als Moderator — Claude Opus 4.7 oder Sonnet 4.6 für wichtige Aufgaben.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL IV. ARBEITSMODI                         ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 7. VIER HAUPTMODI ▓▓▓
+
+══ 7.1 🤖 EINZELMODUS ══
+
+Aktiviert sich automatisch, wenn nur eine KI im Konsil ist. Funktioniert wie ein normaler ChatGPT-Style-Chat.
+
+══ 7.2 📊 KOLLEKTIVE ANALYSE ══
+
+Eine Runde: alle KIs antworten parallel, Moderator macht die finale Synthese. Günstiger und schneller als Live-Konsil.
+
+══ 7.3 🏛️ LIVE-KONSIL ══
+
+Egregors Hauptmodus. Mehrere Diskussionsrunden:
+Runde 1: Jede KI beantwortet deine Frage mit ihrer Rolle.
+Runde 2: Jede KI liest, was andere gesagt haben, kritisiert, ergänzt.
+Runde 3 (optional): Suche nach Konsens.
+Finale: Moderator synthetisiert alles.
+
+══ 7.4 💻 CODE-REVIEW-PIPELINE ══
+
+Spezialmodus für Code-Audit (siehe TEIL XI). 5 KIs arbeiten strikt nacheinander:
+1. ✍️ Reasoning — tiefe Analyse
+2. 🛡️ Security — Schwachstellensuche
+3. 🔧 Alternative — Problembereiche umschreiben
+4. ⚖️ Comparison — Optionen vergleichen
+5. 👑 Final Verdict — finale Empfehlungen
+
+══ 7.5 📖 GROSSER TEXT ══
+
+Kontext-Erweiterung. Für Dokumente >40.000 Zeichen: eine KI liest vollständig und erstellt eine Zusammenfassung, andere arbeiten mit ihr.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL V. KONSIL-ERWEITERUNGEN                 ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 8. QUALITÄTS- UND SPAR-SCHALTER ▓▓▓
+
+══ 8.1 SEQUENZIELL ══
+
+Standardmäßig antworten alle KIs parallel. Wenn dein Computer schwach ist — aktiviere „Sequenziell". KIs werden strikt nacheinander antworten.
+
+══ 8.2 💰 SPARMODUS ══
+
+2 Runden fest, Antworten ~150 Wörter, Urteil ~500 Wörter. Token-Einsparung ~75%. Inkompatibel mit Anti-Groupthink.
+
+══ 8.3 🛡️ ANTI-GROUPTHINK ══
+
+Hauptschutz gegen Gruppendenken. Aktiviert zwei Mechanismen:
+
+🎭 Blinde erste Runde — alle KIs antworten OHNE die Rolle zu sehen.
+⚔️ Rotierender Anwalt des Teufels — in jeder Runde wird ein Teilnehmer vorübergehend zum Angreifer.
+
+⚠️ Kostet etwa +30% Tokens. Inkompatibel mit Sparmodus.
+
+══ 8.4 🛡️ RED TEAM ══
+
+Unteroption von Anti-Groupthink. Finale Angriffsrunde auf den etablierten Konsens. ⚠️ Fügt weitere ~15% Tokens hinzu.
+
+══ 8.5 📊 VERTRAUENSKARTE ══
+
+Nach jedem finalen Urteil bewertet der Moderator das Vertrauen auf einer 1-5-Skala:
+
+🟢 5/5 — volle Übereinstimmung
+🟢 4/5 — starke Übereinstimmung
+🟡 3/5 — moderate Übereinstimmung
+🟠 2/5 — schwache Übereinstimmung
+🔴 1/5 — keine Übereinstimmung
+
+══ 8.6 🔗 OPENROUTER ══
+
+Schaltfläche zur schnellen Navigation zu openrouter.ai/models.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL VI. PERSONALISIERUNG                    ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 9. 📝 MEIN KONTEXT (SOUL DOCUMENT) ▓▓▓
+
+Soul Document ist deine Visitenkarte für alle KIs. Einmal ausfüllen — und jede KI in jedem Projekt weiß, wer du bist.
+
+📝 Mein-Kontext-Schaltfläche in der Kopfzeile.
+
+Nützlich anzugeben:
+• Name und Tätigkeitsfeld
+• Expertise-Level
+• Aktive Projekte
+• Lieblings-Technologien, Programmiersprachen
+• Kommunikationsstil
+• Persönliche Merkmale
+
+Länge — von 200 bis 2000 Wörter. Soul Document hängt sich automatisch an JEDEN System-Prompt jeder KI an.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL VII. ARBEIT MIT DATEIEN                 ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 10. DATEITYPEN ▓▓▓
+
+══ 10.1 TEXT UND CODE ══
+
+Alle Hauptformate unterstützt: .md, .txt, .json, .yaml, .js, .ts, .py, .sol, .rs, .go, .c, .cpp, .java, .kt, .swift, .php, .rb, .lua, .sh, .sql und viele andere.
+
+Größe bis 500 KB pro Datei, bis 12.000 Zeichen im Kontext gelesen.
+
+══ 10.2 PDF UND OFFICE ══
+
+PDF vollständig unterstützt. Word- (.docx) und PowerPoint- (.pptx) — teilweise.
+
+══ 10.3 BILDER ══
+
+Unterstützt .png, .jpg, .gif, .webp. KIs mit Vision-Unterstützung analysieren Bilder.
+
+══ 10.4 BÜCHER ══
+
+EPUB, FB2, RTF — werden gelesen. Für große Bücher wird 📖 Großer-Text-Modus angeboten.
+
+══ 10.5 ARCHIVE ══
+
+Über node-7z + 7zip-bin unterstützt: ZIP, RAR, 7Z, TAR, GZ, BZ2, XZ. Verschachtelte Archive bis zu 3 Ebenen.
+
+══ 10.6 DRAG-AND-DROP UND 📎 ══
+
+Zwei Möglichkeiten: 📎-Schaltfläche oder Drag-and-Drop. ⚠️ Für Electron 32+: bei Drag-and-Drop von Archiven unter Windows verwende 📎. Limit: bis zu 15 Dateien gleichzeitig.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL VIII. OBERFLÄCHE                        ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 11. ANZEIGEMODI ▓▓▓
+
+🪟 RASTER — jede KI in ihrer eigenen Zelle, Runden als Tabs.
+📋 LISTE — klassischer linearer Modus.
+
+🪟/📋-Schalter in der Kopfzeile rechts.
+
+
+▓▓▓ 12. KONSIL-VORLAGEN ▓▓▓
+
+4 Hauptvorlagen in der Kopfzeile:
+🌐 Universal — für die meisten Aufgaben
+💻 Code-Entwicklung — für Entwicklung
+🎨 Kreativ — für Schreiben, Design, Ideen
+🚀 Strategie — für wichtige Geschäftsentscheidungen
+
+„Weitere Vorlagen ▾" — weitere 25 Vorlagen: Sicherheits-Audit, Buchautor, Finanzanalyse, Recht, Medizin und mehr.
+
+Eigene Vorlagen erstellen — in Roadmap v1.5.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL IX. PROJEKTE UND DATEN                  ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 13. PROJEKTE ▓▓▓
+
+Ein Projekt ist ein gespeicherter Arbeitskontext: Konsil-Zusammensetzung, Nachrichtenverlauf, Dossier, Project Map, Cache, Dateien.
+
+Projekte speichern automatisch in localStorage. „In Datei speichern" exportiert alles in eine JSON-Datei für Backup.
+
+Klick auf Projekt → 🗑 für Löschung. Löschung ist unwiderruflich.
+
+⚠️ localStorage ist begrenzt (~5-10 MB). Regelmäßig exportieren und aufräumen.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL X. ERWEITERTE FUNKTIONEN                ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 14. 📊 TOKEN- UND KOSTENSTATISTIK ▓▓▓
+
+📊 Statistik-Schaltfläche öffnet detaillierte Abrechnung: Tokens pro Modell, Kosten in Dollar, Gruppierung nach Tagen/Wochen/Monaten. CSV-Export. Preise werden automatisch von openrouter.ai aktualisiert.
+
+
+▓▓▓ 15. 📖 GROSSER TEXT ▓▓▓
+
+Für Dokumente >40.000 Zeichen. Bei Aktivierung:
+1. Eine KI (Gemini 2.0 Flash standardmäßig) liest VOLLSTÄNDIG
+2. Erstellt strukturierte Zusammenfassung in 7 Abschnitten
+3. Diese ~5.000 Tokens werden als Kontext für andere KIs eingesetzt
+4. Du stellst Fragen — alle KIs sehen die Zusammenfassung
+
+Beim Anhängen einer Datei >40.000 Zeichen schlägt Egregor selbst vor, den Modus zu aktivieren.
+
+
+▓▓▓ 16. 📚 CONTEXT COMPRESSION ENGINE ▓▓▓
+
+Project Dossier — kompakte Zusammenfassung des gesamten Gesprächs im Projekt. Erstellt von einer KI (Keeper) und in den Kontext anstelle der vollständigen Historie eingesetzt.
+
+Wann aktivieren:
+• Lange Projekte (30+ Nachrichten)
+• Wenn Antworten teurer werden
+
+Standardmäßig wird das Dossier von Gemini 2.0 Flash gepflegt. Kann in 📚 Einstellungen → ⚙️ geändert werden.
+
+Dossier-Struktur (5 Abschnitte): Hauptthemen, Entscheidungen, offene Fragen, Schlüsselfakten, Dynamik.
+
+Aktualisiert sich automatisch alle 6 Nachrichten oder bei 50k Tokens.
+
+Echte Einsparungen: 10-20× Tokens bei langen Projekten.
+
+
+▓▓▓ 17. 🧠 SEMANTIC CACHE ▓▓▓
+
+Wenn du eine ähnliche Frage in der Vergangenheit gestellt hast — gibt Egregor die gleiche Antwort OHNE API-Aufruf zurück.
+
+Jede Frage wird über Embeddings-Modell (openai/text-embedding-3-small standardmäßig) in einen Vektor umgewandelt.
+
+Übereinstimmungsschwellen:
+• >95% — leise gecachte Antwort 🔁
+• 85-94% — fragen „vorherige Antwort verwenden?"
+• <85% — normale API-Anfrage
+
+Cache deaktiviert für: Anfragen mit Dateien, zeitabhängige Anfragen (mit Wörtern „heute", „Nachrichten", „Rate").
+
+Cache leeren: ⚙️ → Cache leeren.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL XI. CODE-REVIEW UND AUDIT               ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 18. 💻 CODE-REVIEW-PIPELINE ▓▓▓
+
+Code-Review-Pipeline — der vierte Arbeitsmodus. 5 KIs arbeiten strikt nacheinander:
+
+SCHRITT 1. ✍️ REASONING — tiefe Analyse
+Was macht der Code? Architektur. Annahmen. Logische Probleme.
+
+SCHRITT 2. 🛡️ SECURITY — Schwachstellensuche
+Smart Contracts: reentrancy, integer overflow, access control. Web: SQL injection, XSS, CSRF.
+
+SCHRITT 3. 🔧 ALTERNATIVE — alternative Implementierung
+Problembereiche umschreiben. Andere Architektur.
+
+SCHRITT 4. ⚖️ COMPARISON — Vergleich
+Wo Alternative besser/schlechter. Trade-offs. Unparteiisches Urteil.
+
+SCHRITT 5. 👑 FINAL VERDICT — finale Empfehlungen
+🔴 Kritisch / 🟡 Empfohlen / 🟢 Optional / ✅ Wie es ist belassen / 💡 Finaler Code
+
+Ideale Zusammensetzung für Smart-Contract-Audit:
+SCHRITT 1 → DeepSeek R1 🆓 (denkt tief)
+SCHRITT 2 → Claude Sonnet 4.6 (Top Sicherheit)
+SCHRITT 3 → Qwen3 Coder 480B 🆓 (Top-Coder)
+SCHRITT 4 → GPT-4.1 (objektiver Analyst)
+SCHRITT 5 → Claude Opus 4.7 (finaler Richter)
+
+3 von 5 Modellen — kostenlos. Audit-Kosten ~$0.30-0.50 vs $5.000-50.000 bei CertiK.
+
+
+▓▓▓ 19. ⚙️ PIPELINE-EDITOR ▓▓▓
+
+⚙️-Schaltfläche neben 💻 Code-Review öffnet die Einstellungen. Zwei Modi:
+
+🤖 AUTO — Egregor wählt selbst KIs nach Rollen aus dem aktiven Konsil
+✋ MANUELL — du weist explizit spezifische Modelle zu
+
+Im manuellen Modus hat jeder Schritt ein Dropdown mit drei Gruppen:
+🟢 Aktiv im Konsil
+🤖 Anthropic / 🔵 Google / 🟢 OpenAI / ... — vollständiger Katalog
+⚡ OpenRouter — Schaltfläche zur manuellen Eingabe beliebiger Modell-ID
+
+Checkbox links neben jedem Schritt — kann deaktiviert werden. ⚠️ Der finale Schritt 👑 ist obligatorisch.
+
+Pipeline-Einstellungen werden in localStorage gespeichert.
+
+
+▓▓▓ 20. 📦 BIG PROJECT MODE — CODEBASE-ANALYSE ▓▓▓
+
+Bei Aktivierung:
+✅ Alle Dateien werden VOLLSTÄNDIG gelesen (ohne Beschneidung)
+✅ Import-Parsing — Abhängigkeitsgraph
+✅ Keeper schreibt eine „Projekt-Karte"
+✅ Chunking nach Funktionen, Embeddings
+✅ RAG-Suche bei jeder Anfrage
+✅ Integration mit Code-Review-Pipeline
+
+PHASE 1: INDIZIERUNG UND PROJEKT-KARTE
+
+1. ENTPACKEN — Archiv wird in %TEMP%/egregor_big_projects/{projectId}/src/ entpackt
+2. LESEN — alle Code-Dateien vollständig (Limit 2 MB pro Datei, 50 MB pro Projekt, 500 Dateien)
+3. IMPORT-PARSING — für Solidity, JS/TS, Python, Rust, Go
+4. ABHÄNGIGKEITSGRAPH — direkt und umgekehrt
+5. PROJEKT-KARTE — Keeper (Gemini 2.0 Flash) schreibt 7-Abschnitts-Zusammenfassung
+
+PHASE 2: CHUNKING UND EMBEDDINGS (RAG)
+
+1. CHUNKING — jede Datei nach Funktionen
+2. EMBEDDINGS — über OpenRouter generiert (~$0.0001 pro Chunk)
+3. RAG-SUCHE — bei jeder Anfrage Top-8 relevanteste Chunks
+
+PHASE 3: INTEGRATION MIT CODE-REVIEW
+
+Jeder Schritt macht seine eigene RAG-Anfrage nach Spezialisierung:
+SCHRITT 1 → Einstiegspunkte, öffentliche Funktionen
+SCHRITT 2 → externe Aufrufe, msg.sender, delegatecall
+SCHRITT 3 → kritische Pfade
+SCHRITT 4 → arbeitet mit Ergebnissen
+SCHRITT 5 → Zusammenfassung aller Funktionen
+
+UNTERSTÜTZTE SPRACHEN:
+Import-Parsing: Solidity, JS, TS, Python, Rust, Go
+Chunking: gleiche + Erweiterung über Regex
+Lesen (ohne Chunking): Java, Kotlin, Swift, C/C++, C#, Dart, PHP, Ruby, Lua, Shell, SQL, Vue, Svelte und mehr
+
+LIMITS:
+• Dateien pro Projekt — 500
+• Einzeldateigröße — 2 MB
+• Gesamtprojektgröße — 50 MB
+• Archiv-Verschachtelung — 3 Ebenen
+• Ignoriert: node_modules, .git, dist, build, target, .venv
+
+SPEICHERN ZWISCHEN SITZUNGEN:
+Nach der Indizierung in %TEMP%/egregor_big_projects/{projectId}/:
+• src/ — entpackte Code-Dateien
+• index.json — Metadaten
+• embeddings.json — Vektoren
+
+Aufräumen: 🗑-Schaltfläche im Big-Project-Panel.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL XII. ANWENDUNGSFÄLLE                    ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 21. WORKFLOWS FÜR VERSCHIEDENE AUFGABEN ▓▓▓
+
+══ 21.1 SMART-CONTRACT-AUDIT ══
+
+1. Neues Projekt erstellen
+2. Vorlage „Code-Entwicklung 💻"
+3. 💻 Code-Review + 📦 Big Project aktivieren
+4. ZIP-Archiv anhängen
+5. Auf Indizierung warten (~30 Sek.)
+6. ⚙️ → ✋ Manuell — starke Modelle zuweisen
+7. 🛡️ Anti-Groupthink + 🛡️ Red Team
+8. Frage: „Führe vollständiges Sicherheits-Audit durch"
+
+Kosten ~$0.30-0.50. Qualität: professionelles Niveau.
+
+══ 21.2 NEUES PRODUKT ══
+
+1. 📝 Mein Kontext ausfüllen
+2. Vorlage „Strategie 🚀"
+3. 🏛️ Live-Konsil + 🛡️ Anti-Groupthink
+4. Offene Frage stellen
+5. Bei 30+ Nachrichten — 📚 Komprimierung
+6. Für finale Entscheidung — 🛡️ Red Team
+
+══ 21.3 LANGES DOKUMENT ══
+
+1. Dokument öffnen — Egregor schlägt 📖 Großer Text vor
+2. Zustimmen
+3. Fragen stellen — alle KIs nutzen Zusammenfassung
+
+══ 21.4 KRITISCHES PR ══
+
+1. Geänderte Dateien anhängen
+2. 💻 Code-Review + 📦 Big Project (wenn viele Änderungen)
+3. Frage über Auswirkungen auf Codebasis
+
+══ 21.5 KREATIVE IDEEN ══
+
+1. Vorlage „Kreativ 🎨"
+2. 🏛️ Konsil + 🛡️ Anti-Groupthink
+3. Offene Frage: „Erfinde 10 ungewöhnliche Anwendungen von X"
+
+══ 21.6 WICHTIGE ENTSCHEIDUNG ══
+
+1. 🏛️ Konsil
+2. 🛡️ Anti-Groupthink + 🛡️ Red Team
+3. 📊 Vertrauenskarte zeigt, wie sehr zu trauen
+4. Bei 🟠 2/5 oder 🔴 1/5 — Frage präzisieren oder Experten einbeziehen
+
+Merke: Egregor ist ein Werkzeug, kein Ersatz. Die finale Entscheidung liegt immer bei dir.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL XIII. OPTIMIERUNG                       ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 22. TOKEN- UND KOSTENERSPARNIS ▓▓▓
+
+REGEL 1: Kostenlose Modelle als erste Stufe.
+REGEL 2: 💰 Sparmodus für einfache Fragen.
+REGEL 3: 📚 Komprimierung bei langen Projekten.
+REGEL 4: 🧠 Cache immer an.
+REGEL 5: Soul Document — obligatorisch.
+REGEL 6: Big Project Mode nicht unnötig verwenden.
+REGEL 7: Zwei OpenRouter-Schlüssel.
+
+WANN WELCHE FUNKTIONEN VERWENDEN:
+
+EINFACHE AUFGABE → Einzelmodus + 🆓. Kosten: ~$0.
+MITTLERE → 📊 Analyse + 3-4 Modelle. ~$0.01-0.05.
+KOMPLEXE → 🏛️ Konsil + 5 Modelle. ~$0.05-0.30.
+KRITISCHE → 🏛️ + 🛡️ AGT + Red Team. ~$0.20-1.00.
+CODE-AUDIT → 💻 + 📦 Big Project. ~$0.30-2.00.
+BUCH → 📖 Großer Text + Gemini. ~$0.05.
+
+Strategie „kostenloses Erststufen-Konsil": 5 🆓-Modelle + 1 bezahlter Moderator. 80% Aufgaben werden so gelöst.
+
+
+╔══════════════════════════════════════════════╗
+║  TEIL XIV. FEHLERBEHEBUNG                     ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 23. FAQ UND FEHLERLÖSUNG ▓▓▓
+
+„Insufficient credits"
+→ OpenRouter-Guthaben aufbrauchen. Aufladen oder 🆓-Modelle.
+
+„Rate limit exceeded"
+→ Warten oder Schlüssel wechseln.
+
+„Model not found"
+→ Tippfehler in ID. Auf openrouter.ai/models prüfen.
+
+Egregor startet langsam
+→ Erster Start 5-7 Sek. — normal.
+
+Eingabefeld friert ein
+→ Big Project-Indizierung. ~30 Sek. warten.
+
+Schaltflächen unsichtbar
+→ Fenster zu schmal. Erweitern.
+
+Kostenlose Modelle nicht funktionieren
+→ Rate-Limits. Zwei Schlüssel verwenden.
+
+Chat langsam/teuer
+→ Kontext gewachsen. 📚 Komprimierung aktivieren.
+
+Big Project indiziert nicht
+→ Limit-Prüfung (500 Dateien, 50 MB).
+
+PDF parst nicht
+→ pdf-parse installieren. Drag-and-drop unter Windows kann buggen — 📎 verwenden.
+
+Drag-and-drop Archive unter Windows
+→ Electron 32+ Bug. 📎-Schaltfläche verwenden.
+
+Projekt verschwunden
+→ localStorage. „In Datei speichern" für Backup.
+
+═══════════════════════════════════════════════════
+ENDE DER ANLEITUNG. Version 1.1 | Vladislav Shter
+═══════════════════════════════════════════════════

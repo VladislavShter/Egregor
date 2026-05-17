@@ -1,0 +1,1148 @@
+# EGREGOR — Complete Guide
+Version 1.1 | Developer: Vladislav Shter
+
+"Not a competition of minds — but a resonance of intellects"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TABLE OF CONTENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PART I. FUNDAMENTALS
+  1. What is Egregor
+  2. Philosophy and architecture
+  3. First launch — where to start
+
+PART II. CONNECTION
+  4. API Keys
+     4.1 What is OpenRouter
+     4.2 Getting a key
+     4.3 Free 🆓 models
+     4.4 Trick: two keys for economy
+     4.5 Switching between keys
+
+PART III. MODEL CATALOG
+  5. AI Models
+     5.1 Provider categories
+     5.2 Leaders by task type
+     5.3 Free models
+     5.4 Custom OpenRouter models
+  6. Active AI
+     6.1 Adding and removing
+     6.2 Roles — what they mean
+     6.3 Moderator — the main synthesizer
+
+PART IV. WORK MODES
+  7. Four main modes
+     7.1 🤖 Single mode
+     7.2 📊 Collective analysis
+     7.3 🏛️ Live consilium
+     7.4 💻 Code Review pipeline
+     7.5 📖 Big Text (extension)
+
+PART V. CONSILIUM EXTENSIONS
+  8. Quality and economy toggles
+     8.1 Sequential
+     8.2 💰 Economy mode
+     8.3 🛡️ Anti-Groupthink
+     8.4 🛡️ Red Team
+     8.5 📊 Confidence Map
+     8.6 🔗 OpenRouter
+
+PART VI. PERSONALIZATION
+  9. 📝 My Context (Soul Document)
+     9.1 What it is and why
+     9.2 How to fill it in
+     9.3 When it is applied
+
+PART VII. WORKING WITH FILES
+  10. File types
+      10.1 Text and code
+      10.2 PDF and Office documents
+      10.3 Images
+      10.4 Books (EPUB, FB2, RTF)
+      10.5 Archives — ZIP, RAR, 7Z, TAR, GZ
+      10.6 Drag-and-drop and 📎 button
+
+PART VIII. INTERFACE
+  11. Display modes
+      11.1 🪟 Grid
+      11.2 📋 List
+      11.3 Switching
+  12. Consilium presets
+      12.1 4 presets in the header
+      12.2 "More presets ▾"
+      12.3 Creating your own preset
+
+PART IX. PROJECTS AND DATA
+  13. Projects
+      13.1 What is a project
+      13.2 Saving and restoring
+      13.3 Export to file
+      13.4 Deleting projects
+
+PART X. ADVANCED FEATURES
+  14. 📊 Token and cost statistics
+  15. 📖 Big Text
+  16. 📚 Context Compression Engine
+  17. 🧠 Semantic Cache
+
+PART XI. CODE REVIEW AND AUDIT
+  18. 💻 Code Review pipeline
+  19. ⚙️ Pipeline Editor
+  20. 📦 Big Project Mode
+
+PART XII. USE CASES
+  21. Workflows for different tasks
+
+PART XIII. OPTIMIZATION
+  22. Token and cost savings
+
+PART XIV. TROUBLESHOOTING
+  23. FAQ and error resolution
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+╔══════════════════════════════════════════════╗
+║  PART I. FUNDAMENTALS                         ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 1. WHAT IS EGREGOR ▓▓▓
+
+Egregor is a desktop application that runs multiple AI models (from Anthropic, Google, OpenAI, DeepSeek, Qwen, Meta, Mistral, xAI, and others) in collective work mode. They don't just respond in parallel — they debate, criticize each other, synthesize a common verdict, and most importantly: they see what a single AI would miss.
+
+Alone, any AI can make mistakes, hallucinate, miss details. But when 4-7 AIs work together under a moderator's guidance, "intellect resonance" happens — each model compensates for the weak sides of others. This is especially valuable for complex tasks: smart contract audits, strategic decisions, critical code reviews, writing books, finding unconventional ideas.
+
+Egregor works locally on your computer (Windows, macOS, Linux) and connects to models through a unified API — OpenRouter.ai.
+
+
+▓▓▓ 2. PHILOSOPHY AND ARCHITECTURE ▓▓▓
+
+The main idea is not "to compare 5 AIs' opinions" but to get a QUALITATIVELY NEW answer born from collective discussion.
+
+Architectural layers:
+• AI Models — the system's brain (Claude, Gemini, GPT, DeepSeek, etc.)
+• Roles — each AI has its function (developer, security auditor, creative, fact-checker...)
+• Moderator — the main AI synthesizing others' responses
+• Context extensions — Soul Document, Big Text, Project Dossier, Big Project Map
+• Protection mechanisms — Anti-Groupthink, Red Team, Confidence Map
+
+Egregor is free to install. You only pay for actually used tokens through OpenRouter — usually cents per request. Many models are completely free.
+
+
+▓▓▓ 3. FIRST LAUNCH ▓▓▓
+
+STEP 1. Get an OpenRouter API key
+→ Open https://openrouter.ai (🔗 OpenRouter button in the header)
+→ Register (Gmail or email)
+→ "Keys" section → "Create Key" → copy
+
+STEP 2. Paste the key into Egregor
+→ 🔴 No key button at the top right
+→ Paste key → Save
+→ Should turn 🟢 Main
+
+STEP 3. Fill in "My Context" (5 minutes — will pay off many times)
+→ 📝 My Context button in the header
+→ Describe who you are, what you do, what projects
+→ Save
+→ Now all AIs always know the context and adapt responses
+
+STEP 4. Choose a preset or assemble your consilium
+→ In header: "Universal 🌐", "Code Development 💻", "Creative 🎨", "Strategy 🚀"
+→ Or "More presets ▾" — 25 ready-made sets
+→ You can assemble your own: "+" button in the left panel
+
+STEP 5. Ask your first question
+→ Just type in the field below
+→ Attach files with 📎 button or drag-and-drop
+
+
+╔══════════════════════════════════════════════╗
+║  PART II. CONNECTION                          ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 4. API KEYS ▓▓▓
+
+══ 4.1 WHAT IS OPENROUTER ══
+
+OpenRouter.ai is a unified API gateway to 300+ AI models from all leading providers. One key — access to everything. Prices match the original providers' (or cheaper via free providers on OpenRouter).
+
+Instead of having 5 different accounts (Anthropic, OpenAI, Google, etc.), you have one OpenRouter key and use any models with a single click.
+
+══ 4.2 GETTING A KEY ══
+
+1. Open openrouter.ai (or 🔗 OpenRouter button in Egregor)
+2. Register
+3. Top up your balance (minimum $5 — lasts long, or use only 🆓 models)
+4. Keys section → Create Key
+5. Copy the key (starts with sk-or-v1-...)
+6. Paste into Egregor: 🔴 No key button → Save
+
+══ 4.3 FREE 🆓 MODELS ══
+
+OpenRouter provides several models for free (with rate-limits but enough for most tasks). In Egregor's catalog they are marked 🆓:
+
+• DeepSeek R1 🆓 — deep reasoning, great for code analysis
+• DeepSeek V3 🆓 — general purpose, good quality
+• Qwen3 Coder 480B 🆓 — top coder
+• Qwen 3 235B 🆓 — general
+• Llama 4 Maverick 🆓 — from Meta
+• Llama 4 Scout 🆓 — light
+• Gemma 3 🆓 — from Google
+• Nemotron 3 Super 🆓 — from Nvidia
+
+Free models DO NOT give the quality of Claude Opus or GPT-4, but for drafts, simple questions, first audit passes — they save excellently.
+
+══ 4.4 TRICK: TWO KEYS FOR ECONOMY ══
+
+One of the most useful tricks:
+
+• "Main" key — your primary account with balance
+• "Free" key — separate account ONLY for 🆓 models
+
+So free models work through the second account's limits, not competing with your main one. Doubles the number of free requests per day.
+
+Create two OpenRouter accounts on different emails. In Egregor: 🟢 button → + Add key → name it "Free".
+
+══ 4.5 SWITCHING BETWEEN KEYS ══
+
+The 🟢 button in the header opens the key manager. Click on a key to make it active — all subsequent requests go through it. Convenient when one's limit is exhausted.
+
+
+╔══════════════════════════════════════════════╗
+║  PART III. MODEL CATALOG                      ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 5. AI MODELS ▓▓▓
+
+══ 5.1 PROVIDER CATEGORIES ══
+
+In Egregor's catalog (opens via "+" button on the left) models are grouped:
+
+🤖 Anthropic — Claude Opus 4.7, 4.6, Sonnet 4.6, 4.5, Haiku 4.5, 3.7
+🔵 Google — Gemini 3.1 Pro, 3 Pro, 3 Flash, 2.5 Pro, Flash, 2.0 Flash
+🟢 OpenAI — GPT-4.1, GPT-4o, GPT-4o mini, etc.
+🟣 xAI — Grok 4, Grok 3
+🐉 DeepSeek — DeepSeek R1 🆓, V3 🆓, Chat
+🐲 Qwen — Qwen3 Coder 480B 🆓, Qwen 3 235B 🆓, Qwen 2.5
+🦙 Meta — Llama 4 Maverick 🆓, Scout 🆓, Llama 3.x
+🌬️ Mistral — Mistral Large, Codestral, Mixtral
+💎 Others — Gemma 3 🆓, Nemotron 3 🆓, Command R+, etc.
+
+══ 5.2 LEADERS BY TASK TYPE ══
+
+Each task has its king:
+
+DEEP REASONING
+• Claude Opus 4.7 — best quality, most expensive
+• DeepSeek R1 🆓 — almost like Opus, free
+• GPT-4.1 — good balance
+
+CODE AND ARCHITECTURE
+• Qwen3 Coder 480B 🆓 — top coder, free
+• Claude Sonnet 4.6 — excellent for complex code
+• DeepSeek V3 🆓 — for general code tasks
+
+SPEED + VOLUME
+• Gemini 2.0 Flash — 1M context, very fast, cheap
+• Gemini 2.5 Flash — balance of speed and quality
+• Claude Haiku 4.5 — fast Claude for simple tasks
+
+CREATIVITY
+• Claude Sonnet 4.6 — best writer
+• GPT-4o — creative texts
+• Gemini 3 Pro — unconventional thinking
+
+FACT-CHECKING AND ANALYSIS
+• Claude Opus 4.7 — fact accuracy
+• GPT-4.1 — balance between accuracy and speed
+
+══ 5.3 FREE MODELS ══
+
+Free models on OpenRouter have rate-limits (~20 requests/min, ~200/day per key). Enough for most tasks. Strategy:
+
+1. Use 🆓 models as the FIRST TIER — for draft answers
+2. If result doesn't satisfy — switch to paid
+3. Use two keys (see 4.4) to double daily limit
+
+🆓 models work ideally in:
+• Economy mode (quick short answers)
+• Parallel consiliums (where you can put 3-4 free models + one paid as moderator)
+• Code Review pipeline (Reasoning + Alternative — free, Security + Final — paid Claude)
+
+══ 5.4 CUSTOM OPENROUTER MODELS ══
+
+Egregor's catalog updates with new versions. But if OpenRouter added a new model not yet in the catalog — you can use it manually:
+
+1. In Egregor's catalog (or Pipeline Editor) select "＋ Enter any OpenRouter model ID..."
+2. Enter ID like provider/model-name (e.g. anthropic/claude-opus-5)
+3. Egregor will save it and start using it
+
+Find any model's ID at openrouter.ai/models (🔗 OpenRouter button in header).
+
+
+▓▓▓ 6. ACTIVE AI ▓▓▓
+
+══ 6.1 ADDING AND REMOVING ══
+
+Left — active AI panel (what currently participates in the consilium).
+
+Add:
+• "+" button at panel bottom → choose from catalog
+• Or load a ready preset in the header
+
+Remove:
+• Click on AI → 🗑 button on the right
+
+Temporarily disable (without removing):
+• Click on AI → "Active" toggle
+
+A consilium can have from 1 to 10 AIs. Optimal 3-5 for quality and speed.
+
+══ 6.2 ROLES — WHAT THEY MEAN ══
+
+Each AI has a ROLE — its professional mask. Role affects:
+• Response style (creative / technical / critical)
+• What AI looks for in the question
+• How AI behaves in discussion with others
+
+Main roles:
+👑 Moderator (mod) — synthesizes others' answers, gives final verdict
+💻 Developer (dev) — deep code analysis, architecture
+🛡️ Security (security) — vulnerability search, audit
+🎨 Creative (creative) — unconventional ideas, rethinking
+📋 Auditor (auditor) — critical analysis, contradiction search
+🔍 Fact-checker (factcheck) — information accuracy, sources
+💼 Business analyst (business) — market view, ROI
+🎭 Devil's advocate (devil) — attack on consensus
+👁️ Observer (observer) — neutral position
+
+Role changes by clicking on AI → dropdown role list.
+
+══ 6.3 MODERATOR — THE MAIN SYNTHESIZER ══
+
+One of the AIs is always marked with 👑 — this is the MODERATOR. It:
+• Receives answers from all others
+• Analyzes contradictions and agreements
+• Issues the final synthesis
+• In Code Review mode — writes the final verdict
+• In Anti-Groupthink — ensures rule compliance
+
+Set moderator: click on AI → role "👑 Moderator". Only one moderator at a time.
+
+Recommendation: set the strongest model as moderator — Claude Opus 4.7 or Sonnet 4.6 for important tasks.
+
+
+╔══════════════════════════════════════════════╗
+║  PART IV. WORK MODES                          ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 7. FOUR MAIN MODES ▓▓▓
+
+══ 7.1 🤖 SINGLE MODE ══
+
+Activates automatically when there's only one AI in the consilium. Works like a regular ChatGPT-style chat — one AI, one response. Suitable for:
+• Simple questions
+• When no discussion is needed
+• When saving tokens
+
+══ 7.2 📊 COLLECTIVE ANALYSIS ══
+
+Toggle in toolbar above input field. One round: all AIs answer your question in parallel, moderator makes the final synthesis.
+
+Use for:
+• Comparing opinions of different models
+• Quick questions where diversity is needed
+• When you don't need the discussion itself, you need a summary view
+
+Cheaper and faster than live consilium.
+
+══ 7.3 🏛️ LIVE CONSILIUM ══
+
+Egregor's main mode. Several rounds of discussion:
+
+Round 1: Each AI answers your question with their role.
+Round 2: Each AI reads what others said, criticizes, supplements, agrees.
+Round 3 (optional): Search for consensus.
+Final: Moderator synthesizes everything into the final verdict.
+
+Ideal for:
+• Complex strategic decisions
+• Architecture tasks
+• Creative projects
+• Any situation where analysis completeness matters
+
+══ 7.4 💻 CODE REVIEW PIPELINE ══
+
+Special mode for code auditing (see PART XI, section 18). This is not parallel discussion but a strict sequential pipeline of 5 steps where each AI is a specialist:
+
+1. ✍️ Reasoning (developer) — deep analysis
+2. 🛡️ Security (security auditor) — vulnerability search
+3. 🔧 Alternative (creative) — rewrite problem areas
+4. ⚖️ Comparison (analyst) — compare options
+5. 👑 Final Verdict (moderator) — final recommendations
+
+Each step sees the previous ones' work. Get CertiK-level professional audit for cents instead of thousands of dollars.
+
+══ 7.5 📖 BIG TEXT (EXTENSION) ══
+
+Not a mode but a context EXTENSION. Activated by 📖 Big Text toggle in toolbar. Details in PART X, section 15.
+
+Essence: when you need to work with a very large document (>40,000 characters, ~100+ book pages), Egregor:
+1. One AI (Gemini 2.0 Flash by default, 1M context) reads the document in full
+2. Creates a structured summary (~5,000 tokens)
+3. Other AIs work with the summary
+
+Huge savings. More details — in the Big Text chapter.
+
+
+╔══════════════════════════════════════════════╗
+║  PART V. CONSILIUM EXTENSIONS                 ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 8. QUALITY AND ECONOMY TOGGLES ▓▓▓
+
+In the header on the right — a row of toggles and control buttons:
+
+══ 8.1 SEQUENTIAL ══
+
+By default all AIs in a round answer IN PARALLEL — fast but loads CPU and memory. If your computer is weak or you want to see how each AI "thinks" — enable "Sequential". AIs will answer strictly one after another.
+
+══ 8.2 💰 ECONOMY MODE ══
+
+Enabled → consilium becomes shorter and cheaper:
+• 2 rounds fixed (instead of 3-4)
+• Participants write ~150 words per response (instead of 400+)
+• Moderator writes ~500 words instead of 1500+
+• Token savings ~75%
+
+Useful for simple questions where full analysis isn't needed. Incompatible with Anti-Groupthink (both change discussion structure).
+
+══ 8.3 🛡️ ANTI-GROUPTHINK ══
+
+Main protection against groupthink — when AIs start repeating each other because they see the same answers.
+
+Enables two mechanisms:
+
+🎭 Blind first round — all AIs answer WITHOUT seeing the role. They don't know one is security, another is creative. Get clean independent opinions, without role-fitting.
+
+⚔️ Rotating devil's advocate — on each round one participant TEMPORARILY becomes the attacker. Their task is to find weak points in the common direction. The "advocate" role rotates.
+
+⚠️ Costs about +30% tokens. Incompatible with Economy mode.
+
+Enable for:
+• High-stakes strategic decisions
+• When you need to avoid "polite agreement"
+• Security audits
+• Any tasks where consensus seems suspiciously fast
+
+══ 8.4 🛡️ RED TEAM ══
+
+Sub-option of Anti-Groupthink (appears only when AG enabled). Final round of attack on the established consensus.
+
+Before moderator's verdict participants go through the consensus once more and try to break it: find risks, omissions, hidden assumptions.
+
+⚠️ Adds another ~15% tokens.
+
+Enable when:
+• Final decision is very critical (millions invested, smart contract security)
+• Want to avoid a "beautiful but dangerous" verdict
+
+══ 8.5 📊 CONFIDENCE MAP ══
+
+Not a toggle but a feature. After each final verdict the moderator evaluates the consilium's confidence on a 1-5 scale:
+
+🟢 5/5 — full agreement — all AIs came to one opinion without disputes
+🟢 4/5 — strong agreement — opinions are close, minor differences
+🟡 3/5 — moderate agreement — there are substantial differences, but a general line exists
+🟠 2/5 — weak agreement — serious disagreements, compromise verdict
+🔴 1/5 — no agreement — opinions are opposite, no unified conclusion
+
+Badge appears in the title of the final answer. This is a signal to you: how much can the verdict be trusted.
+
+If map shows 🔴 1/5 or 🟠 2/5 — usually worth:
+• Reading the rounds and understanding the disagreement
+• Refining the question
+• Running with Anti-Groupthink + Red Team
+• Involving experts
+
+══ 8.6 🔗 OPENROUTER ══
+
+Button for quick navigation to openrouter.ai/models — catalog of all 300+ models. Useful when:
+• Looking for a model not in Egregor's catalog
+• Want to check current prices
+• Want to compare characteristics
+
+
+╔══════════════════════════════════════════════╗
+║  PART VI. PERSONALIZATION                     ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 9. 📝 MY CONTEXT (SOUL DOCUMENT) ▓▓▓
+
+══ 9.1 WHAT IT IS AND WHY ══
+
+Soul Document (or "My Context") is your business card for all AIs. Fill it once — and any AI in any project knows who you are, what you do, your background.
+
+Without it AI answers in vacuum every time — general advice for "average user". With it — specific advice for your situation.
+
+══ 9.2 HOW TO FILL IT IN ══
+
+📝 My Context button in the header.
+
+Useful to specify:
+• Name and field of activity
+• Expertise level (beginner / pro / expert in something)
+• Active projects (brief description)
+• Favorite technologies, programming languages
+• Communication style (formal, informal, direct)
+• Any personal features that will help adapt answers
+
+Length — from 200 to 2000 words. Too short — pointless, too long — bloats context and token cost.
+
+══ 9.3 WHEN IT IS APPLIED ══
+
+Soul Document automatically attaches to EVERY system prompt of any AI in Egregor. You do nothing — it works.
+
+When to update:
+• Changed job or project
+• Got new experience (learned Solidity, mastered trading)
+• Interests changed
+
+Button shows 📝 Context ✓ when document is filled.
+
+
+╔══════════════════════════════════════════════╗
+║  PART VII. WORKING WITH FILES                 ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 10. FILE TYPES ▓▓▓
+
+══ 10.1 TEXT AND CODE ══
+
+All main formats supported:
+• Documentation — .md, .txt, .html, .xml, .json, .yaml, .yml, .toml, .ini
+• JavaScript / TypeScript — .js, .ts, .jsx, .tsx, .mjs, .cjs
+• Python — .py
+• Solidity — .sol
+• Rust — .rs
+• Go — .go
+• C/C++ — .c, .cpp, .h, .hpp
+• Java / Kotlin / Swift — .java, .kt, .swift
+• PHP / Ruby / Lua / Dart — .php, .rb, .lua, .dart
+• Shell / SQL / Config — .sh, .bat, .ps1, .sql, .conf
+• Web frameworks — .vue, .svelte, .astro
+• Linux drivers — .inf, .dts, .dtsi, .ld, .mod
+
+Size up to 500 KB per file, up to 12,000 characters read into context (for a single file).
+
+══ 10.2 PDF AND OFFICE DOCUMENTS ══
+
+PDF fully supported via pdf-parse library. Just attach — Egregor extracts text and passes to AI.
+
+Word (.docx) and PowerPoint (.pptx) documents — partially, via text extraction.
+
+══ 10.3 IMAGES ══
+
+Supported .png, .jpg, .jpeg, .gif, .webp. AIs supporting vision (Claude, GPT-4o, Gemini) will analyze images. Other models will see only metadata.
+
+══ 10.4 BOOKS (EPUB, FB2, RTF) ══
+
+Egregor can read book formats:
+• EPUB — unpacked via adm-zip and text collected
+• FB2 — XML parsing
+• RTF — text extraction via regex
+
+For large books Big Text 📖 mode is automatically offered (see section 15).
+
+══ 10.5 ARCHIVES — ZIP, RAR, 7Z, TAR, GZ ══
+
+Via node-7z + 7zip-bin all main formats supported:
+• .zip — standard archive
+• .rar — WinRAR format
+• .7z — high compression
+• .tar, .gz, .tgz — Unix archives
+• .bz2, .tbz, .tbz2 — bzip2
+• .xz — LZMA2
+
+Nested archives — up to 3 levels recursion. File limit in archive — 200 (protection against archive bombs).
+
+When archive contains code — Egregor can automatically offer to enable Big Project Mode for joint analysis (see section 20).
+
+══ 10.6 DRAG-AND-DROP AND 📎 BUTTON ══
+
+Two ways to attach files:
+
+1. 📎 BUTTON next to input field — opens standard file selection dialog.
+
+2. DRAG-AND-DROP — drag files directly into Egregor's window. Entire folders supported (Egregor recursively collects files).
+
+⚠️ IMPORTANT for Electron 32+: when drag-and-dropping archives on Windows you need to use 📎 button, not drag (there's a bug with empty file paths).
+
+Limit: up to 15 files attached simultaneously. Can be removed with ✕.
+
+
+╔══════════════════════════════════════════════╗
+║  PART VIII. INTERFACE                         ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 11. DISPLAY MODES ▓▓▓
+
+══ 11.1 🪟 GRID ══
+
+Each AI shown in its own card-cell, arranged in CSS Grid (1-4 columns depending on count). Moderator's final verdict — full width at top. Rounds shown as tabs.
+
+Ideal for:
+• Visually comparing different opinions
+• Quickly seeing "who said what"
+• Aesthetic perception
+
+══ 11.2 📋 LIST ══
+
+Classic linear mode — all messages go top to bottom. Convenient for:
+• Reading detailed long answers
+• When you want it like a regular chat
+• When there are few models
+
+══ 11.3 SWITCHING ══
+
+🪟/📋 toggle in header right. Grid by default.
+
+
+▓▓▓ 12. CONSILIUM PRESETS ▓▓▓
+
+══ 12.1 4 PRESETS IN HEADER ══
+
+First 4 presets available by button in header:
+
+🌐 Universal — Claude + Gemini + GPT + DeepSeek + moderator. For most tasks.
+
+💻 Code Development — DeepSeek R1 (analysis) + Claude (security) + Qwen Coder (alt) + GPT (comparison) + Opus (final). Best for development.
+
+🎨 Creative — Claude Sonnet + Gemini Pro + GPT-4o + Llama. For writing, design, ideas.
+
+🚀 Strategy — Opus + Sonnet + GPT-4.1 + DeepSeek + Gemini Pro. For important business decisions.
+
+══ 12.2 "MORE PRESETS ▾" ══
+
+Button in header opens dropdown with another 25 presets:
+• Free consilium — only 🆓 models
+• Economy — cheap fast models
+• Security audit — top models for security
+• Book writer — for creating books
+• Financial analysis — for trading and investing
+• Legal — for legal questions
+• Medical — for medical (general, not replacing doctors)
+• And 18 more presets
+
+══ 12.3 CREATING YOUR OWN PRESET ══
+
+Currently presets are baked into Egregor's code. Creating your own presets — in roadmap v1.5.
+
+Alternative: save your consilium as a project (see PART IX). When opening the project — consilium composition is restored.
+
+
+╔══════════════════════════════════════════════╗
+║  PART IX. PROJECTS AND DATA                   ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 13. PROJECTS ▓▓▓
+
+══ 13.1 WHAT IS A PROJECT ══
+
+Project is a saved work context:
+• Consilium composition (which AIs, which roles)
+• Message history
+• Project Dossier (if compression active)
+• Big Project Map (if Big Project Mode active)
+• Semantic Cache for this project
+• Uploaded files
+
+Useful for separating topics — one project "SovereignBank", another "Meditation Book", third "Company Strategy".
+
+══ 13.2 SAVING AND RESTORING ══
+
+Projects save automatically to browser localStorage (in Electron — in app file). No need to save manually — each message saves immediately.
+
+Left — projects panel. Click switches.
+
+══ 13.3 EXPORT TO FILE ══
+
+"Save to file" button exports EVERYTHING — projects, keys (encrypted), settings — into one JSON file. Useful for:
+• Backup
+• Transfer to another computer
+• Recovery after reinstallation
+
+══ 13.4 DELETING PROJECTS ══
+
+Click on project → 🗑. Deletion is irreversible. If Big Project Mode was active — temporary files are also deleted.
+
+⚠️ IMPORTANT: localStorage is limited (~5-10 MB). With many projects or large Big Projects — can overflow. Regularly export and clean up.
+
+
+╔══════════════════════════════════════════════╗
+║  PART X. ADVANCED FEATURES                    ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 14. 📊 TOKEN AND COST STATISTICS ▓▓▓
+
+📊 Statistics button in header opens modal with detailed accounting:
+• Which model used how many tokens (in/out separately)
+• How much it cost in dollars
+• Grouping by days, weeks, months
+• Top models by spending
+• Trend chart
+
+Grouping switch at top of modal: 📅 By day / week / month.
+
+"Export CSV" button at bottom. Can load into Excel/Google Sheets for your own calculations or accounting.
+
+Prices fetched automatically from openrouter.ai/api once a day.
+
+
+▓▓▓ 15. 📖 BIG TEXT ▓▓▓
+
+When you need to work with a very large document — a book, long contract, technical documentation, dissertation. For documents over ~40,000 characters (about 100+ pages).
+
+When enabling 📖 Big Text:
+1. One AI (Gemini 2.0 Flash by default, 1M token context) reads the document IN FULL
+2. Creates a structured summary by 7 sections:
+   - Document type and purpose
+   - Main theses
+   - Structure and table of contents
+   - Key data/figures
+   - Controversial or complex spots
+   - Quotes of key places
+   - Reading recommendations
+3. This summary (~5,000 tokens) is substituted as context for all other AIs
+4. You ask questions — all AIs see the summary and can answer without re-reading the source
+
+When attaching a file >40,000 characters Egregor SUGGESTS enabling the mode itself. You can refuse (if you want to work with a fragment). You can change the reader model in mode settings.
+
+
+▓▓▓ 16. 📚 CONTEXT COMPRESSION ENGINE ▓▓▓
+
+When chat with consilium grows to hundreds of messages, context becomes huge — each new request drags along the entire history. Token cost grows avalanche-like.
+
+Project Dossier solves this. It's a compact summary of your entire conversation in the project — main topics, decisions, agreements, open questions. Created by one AI (keeper) and substituted into context instead of full history.
+
+When to enable:
+• Long projects (30+ messages in one topic)
+• When you notice answers getting more expensive
+• When working on a book or extended task
+
+Egregor itself offers to enable when reaching 30 messages in a project.
+
+By default the dossier is kept by Gemini 2.0 Flash (1M context, fast, cheap). Can be changed in 📚 Compression settings → ⚙️.
+
+Dossier structure (5 sections):
+1. Main discussion topics
+2. Decisions and agreements
+3. Open questions
+4. Key facts and context
+5. Dynamics and direction of further movement
+
+Dossier updates automatically:
+• Every 6 new messages
+• Or when context exceeds 50,000 tokens
+
+You can also rebuild manually: 📚 Compression panel → Rebuild.
+
+Real savings:
+• Before enabling: context 100k tokens → each request expensive
+• With Compression: context 5k token summary → requests cheap
+• Savings 10-20× on long projects
+
+
+▓▓▓ 17. 🧠 SEMANTIC CACHE ▓▓▓
+
+If you asked the same or similar in meaning question in the past — Egregor can return the same answer WITHOUT API call. Zero cost, instant response.
+
+Each question is turned into a vector of ~1,500 numbers via embeddings model (by default openai/text-embedding-3-small — pennies per request). Similar in meaning questions have close vectors.
+
+With new question we compare its vector to saved ones via cosine similarity (number 0 to 1).
+
+Match thresholds:
+• >95% — silently return cached answer 🔁
+• 85-94% — ask "Similar question: ... — use previous answer?"
+• <85% — regular API request
+
+Cache DISABLES for:
+• Requests with attached files (always new context)
+• Requests with temporal words: "today", "now", "news", "rate", "weather", "current", "recent" — in Russian and English
+
+🧠 Cache ✓ button shows hit counter. Click 🔁 next to it — statistics:
+• Hits all time
+• API requests
+• Tokens saved
+
+Cache reset: ⚙️ → Clear cache.
+
+Storage — per-project (each project has its own cache) or global (via switch in settings).
+
+Record TTL — 30 days. Limit — 500 records per project.
+
+
+╔══════════════════════════════════════════════╗
+║  PART XI. CODE REVIEW AND AUDIT               ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 18. 💻 CODE REVIEW PIPELINE ▓▓▓
+
+In a regular consilium AIs work IN PARALLEL — each with their role answers one question. But for code it needs differently: code review requires a sequential chain of specialists like in a real development team.
+
+Code Review pipeline is the fourth work mode (💻 Code Review button in toolbar). 5 AIs work strictly in sequence, each sees the previous results.
+
+FIVE PIPELINE STEPS:
+
+STEP 1. ✍️ REASONING — deep analysis
+What does the code do? Architecture. Assumptions. Logical problems. Performance.
+
+STEP 2. 🛡️ SECURITY — vulnerability search
+Smart contracts: reentrancy, integer overflow, access control, msg.sender, front-running, oracle manipulation. Web: SQL injection, XSS, CSRF. General: race conditions, secrets in code, weak crypto.
+
+STEP 3. 🔧 ALTERNATIVE — alternative implementation
+Rewriting problem areas. Different architecture. Specific code, not general words.
+
+STEP 4. ⚖️ COMPARISON — comparison
+Where alternative is better / worse. What's critical / taste. Trade-offs. Impartial verdict.
+
+STEP 5. 👑 FINAL VERDICT — final recommendations
+Structured report:
+🔴 Critical changes (mandatory)
+🟡 Recommended (worth doing)
+🟢 Optional (if you want)
+✅ What to leave as is
+💡 Final code
+
+With confidence map 1-5.
+
+MODEL DISTRIBUTION BY ROLES:
+
+Ideal composition for smart contract audit:
+
+STEP 1 → DeepSeek R1 🆓 (thinks deeply)
+STEP 2 → Claude Sonnet 4.6 (top by security)
+STEP 3 → Qwen3 Coder 480B 🆓 (top coder)
+STEP 4 → GPT-4.1 (objective analyst)
+STEP 5 → Claude Opus 4.7 (final judge)
+
+3 out of 5 models — free. Total audit cost ~$0.30-0.50 vs $5,000-50,000 at CertiK.
+
+WHEN TO USE:
+
+• Smart contract audit before mainnet
+• Code review of critical PR
+• Bug hunting in legacy code
+• Refactoring proposals
+• Checking your own code before commit
+
+
+▓▓▓ 19. ⚙️ PIPELINE EDITOR ▓▓▓
+
+⚙️ button next to 💻 Code Review button opens pipeline settings. Two modes:
+
+🤖 AUTO MODE (default)
+Egregor itself picks AIs from active consilium by their roles. Suitable when you have a balanced consilium where there are dev, security, creative, auditor roles.
+
+✋ MANUAL SETUP
+You explicitly assign specific models to each step. Gives full control — especially important for audit where strongest models are needed.
+
+In manual mode each step has a dropdown with three groups:
+🟢 Active in consilium — AIs from current composition
+🤖 Anthropic / 🔵 Google / 🟢 OpenAI / ... — full Egregor catalog
+⚡ OpenRouter — button to manually enter any model ID
+
+Option "＋ Enter any OpenRouter model ID..." opens input field. Enter any ID (e.g. anthropic/claude-opus-5 or new model not yet in catalog) — it will be used.
+
+Checkbox to left of each step. If you disable a step — it's skipped in the pipeline.
+
+⚠️ Final step 👑 cannot be disabled — it's mandatory (marked 🔒).
+
+Pipeline settings (mode + step list with models + checkboxes) save to localStorage. Restored on Egregor restart.
+
+"🔄 Reset" button returns default (auto mode, all steps enabled).
+
+
+▓▓▓ 20. 📦 BIG PROJECT MODE — CODEBASE ANALYSIS ▓▓▓
+
+Regular archive work mode truncates each file to 12,000 characters — for a large project audit that's a joke. Real smart contract audit requires ALL files in full, understanding connections between them, tracking call chains.
+
+Big Project Mode solves this. When enabled:
+✅ All files read IN FULL (without truncation)
+✅ Import parsing — dependency graph built
+✅ Keeper writes a "Project Map" — general architecture overview
+✅ Chunking by functions, embeddings of all functions
+✅ RAG search of relevant code at each request
+✅ Integration with Code Review pipeline — each step gets its relevant code
+
+Ideal for smart contract audit from multiple files or code review of an entire module.
+
+STAGE 1: INDEXING AND PROJECT MAP
+
+When enabling 📦 Big Project Mode and attaching an archive with code:
+
+1. UNPACKING — archive expands into permanent folder %TEMP%/egregor_big_projects/{projectId}/src/
+2. READING — all code files read in full (limit per file 2 MB, per project — 50 MB and 500 files)
+3. IMPORT PARSING — for each file imports found:
+   • Solidity: import "./Vault.sol"
+   • JS/TS: import X from "./Y"
+   • Python: from X import Y
+   • Rust: use crate::X
+   • Go: import "X"
+4. DEPENDENCY GRAPH — direct graph built (what depends on what) and reverse (who uses this file)
+5. PROJECT MAP — keeper (Gemini 2.0 Flash by default) writes 7-section summary:
+   1. Project type and purpose
+   2. Architecture
+   3. File map (each file with description)
+   4. Connection graph in text form
+   5. Suspicious places and risks (preliminary review)
+   6. Key functions
+   7. Audit recommendations
+
+This Map is substituted into the system prompt of ALL AIs.
+
+STAGE 2: CHUNKING AND EMBEDDINGS (RAG)
+
+After Project Map:
+
+1. CHUNKING — each file is split into functions/methods/contracts. For Solidity: function, modifier, constructor, contract, library, interface. For JS/TS: function, class, methods, arrow functions. For Python: def, class. For Rust: fn, impl, struct, enum, trait. For Go: func, type struct, type interface.
+
+2. EMBEDDINGS — for each chunk via OpenRouter a vector is generated (by default openai/text-embedding-3-small). Progress shown in Big Project panel. Cost ~$0.0001 per chunk, on project of 50 functions ~$0.005.
+
+3. RAG SEARCH — at each your request:
+   • Get embedding of request
+   • Calculate cosine similarity with all chunks
+   • Take top-8 most relevant
+   • Additionally by dependency graph add related functions
+   • Context automatically attached to request
+
+STAGE 3: INTEGRATION WITH CODE REVIEW
+
+In 💻 Code Review mode when Big Project Mode active — each pipeline step makes ITS OWN RAG request by its specialization:
+
+STEP 1 (Reasoning) → searches entry points, public functions, constructors
+STEP 2 (Security) → searches external calls, msg.sender, transfer, delegatecall, modifiers, onlyOwner
+STEP 3 (Alternative) → searches critical paths, core business logic
+STEP 4 (Comparison) → works with accumulated results
+STEP 5 (Final) → gets summary list of all functions previous steps saw
+
+This turns Egregor into a full CertiK-level auditor for projects up to 50,000 lines of code.
+
+SUPPORTED LANGUAGES:
+
+IMPORT PARSING:
+• Solidity, JavaScript, TypeScript, JSX, TSX
+• Python, Rust, Go
+
+CHUNKING BY FUNCTIONS:
+• Same languages + support via regex patterns
+
+FILE READING (without chunking):
+• Java, Kotlin, Swift, C/C++, C#, Dart
+• PHP, Ruby, Lua, Shell, SQL
+• Vue, Svelte, Astro
+• JSON, YAML, TOML, XML
+• Documentation (MD, TXT, HTML, CSS, SCSS)
+
+LIMITS AND RESTRICTIONS:
+
+• Files per project — 500
+• Single file size — 2 MB
+• Total project size — 50 MB
+• Archive nesting — 3 levels
+• Ignored: node_modules, .git, dist, build, target, .venv, __pycache__
+
+SAVING BETWEEN SESSIONS:
+
+After indexing in folder %TEMP%/egregor_big_projects/{projectId}/ stored:
+• src/ — unpacked code files
+• index.json — metadata (graph, chunks without content)
+• embeddings.json — vectors of all chunks
+
+When switching to a project Egregor:
+1. Restores index from index.json
+2. Loads embeddings.json into memory
+3. Ready to answer with RAG instantly
+
+Cleanup: 🗑 button in Big Project panel removes everything.
+
+
+╔══════════════════════════════════════════════╗
+║  PART XII. USE CASES                          ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 21. WORKFLOWS FOR DIFFERENT TASKS ▓▓▓
+
+══ 21.1 SMART CONTRACT AUDIT ══
+
+1. Create new project "Audit [contract name]"
+2. Load preset "Code Development 💻"
+3. In header: 💻 Code Review + 📦 Big Project
+4. Attach zip archive with contracts
+5. Wait for indexing + Project Map + embeddings (~30 sec)
+6. Click ⚙️ → ✋ Manual setup
+7. Assign strong models to each step:
+   • Reasoning → DeepSeek R1 🆓
+   • Security → Claude Sonnet 4.6
+   • Alternative → Qwen3 Coder 480B 🆓
+   • Comparison → GPT-4.1
+   • Final → Claude Opus 4.7
+8. Enable 🛡️ Anti-Groupthink + 🛡️ Red Team
+9. Ask: "Conduct a full security audit of all contracts"
+10. Get structured report indicating specific files and functions
+
+Cost: ~$0.30-0.50. Quality: professional audit level.
+
+══ 21.2 NEW PRODUCT DEVELOPMENT ══
+
+1. Fill in 📝 My Context (describe project, target audience, constraints)
+2. Create project "Product X"
+3. Preset "Strategy 🚀"
+4. Enable 🏛️ Live consilium + 🛡️ Anti-Groupthink
+5. Start with open question: "What's important to consider when launching X?"
+6. Develop discussion through series of questions
+7. When 30+ messages accumulate — enable 📚 Compression
+8. When final decision needed — add 🛡️ Red Team
+
+══ 21.3 LONG DOCUMENT ANALYSIS ══
+
+1. Open document — Egregor will offer 📖 Big Text itself
+2. Agree — Gemini reads document in full, creates summary
+3. Other AIs work with summary
+4. Ask questions — "What are the main theses?", "What are the risks in section 3?"
+5. For deep analysis — switch to 💻 Code Review or 🏛️ Consilium
+
+══ 21.4 CRITICAL PR CODE REVIEW ══
+
+1. Attach changed files (zip)
+2. Enable 💻 Code Review
+3. If many changes — add 📦 Big Project
+4. Ask: "This is a PR with changes. Conduct code review, focus on impact on the rest of the codebase"
+
+══ 21.5 CREATIVE THINKING AND IDEA SEARCH ══
+
+1. Preset "Creative 🎨"
+2. 🏛️ Live consilium + 🛡️ Anti-Groupthink (for opinion diversity)
+3. Open question: "Come up with 10 unusual applications of X"
+4. After first round — ask to deepen: "Develop idea 3, what scenarios?"
+
+══ 21.6 IMPORTANT DECISION MAKING ══
+
+1. 🏛️ Live consilium
+2. 🛡️ Anti-Groupthink + 🛡️ Red Team — mandatory for important
+3. 📊 Confidence Map will tell how much to trust the conclusion
+4. If map 🟠 2/5 or 🔴 1/5 — decide: ask question more precisely, involve experts, postpone decision
+
+Remember: Egregor is a tool for amplifying your thinking, not a replacement. Final decision is always yours.
+
+
+╔══════════════════════════════════════════════╗
+║  PART XIII. OPTIMIZATION                      ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 22. TOKEN AND COST SAVINGS ▓▓▓
+
+SAVING STRATEGIES:
+
+RULE 1: Use free models as first tier.
+Before turning to Claude Opus ask question to DeepSeek R1 🆓. Often enough.
+
+RULE 2: Enable 💰 Economy for simple questions.
+Not every question needs a full consilium. Economy mode saves 75% tokens.
+
+RULE 3: Enable 📚 Compression on long projects.
+When chat grows to 30+ messages — compression saves 10-20× tokens.
+
+RULE 4: 🧠 Cache always on.
+Semantic cache is (almost) free — repeated questions return previous answers.
+
+RULE 5: Soul Document — mandatory.
+Without it AI asks clarifying questions. With it — answers directly.
+
+RULE 6: Don't use Big Project Mode unnecessarily.
+Indexing and embeddings cost ~$0.05-0.15 per project. For one file not needed.
+
+RULE 7: Two OpenRouter keys.
+Doubles daily limit on free models.
+
+WHEN TO USE WHICH FEATURES:
+
+SIMPLE TASK (quick reference)
+→ Single mode + 🆓 model. Cost: ~$0.
+
+MEDIUM TASK (review of different opinions)
+→ 📊 Collective analysis + 3-4 models. Cost: ~$0.01-0.05.
+
+COMPLEX TASK (full analysis)
+→ 🏛️ Consilium + 5 models. Cost: ~$0.05-0.30.
+
+CRITICAL TASK (important decision)
+→ 🏛️ Consilium + 🛡️ Anti-Groupthink + Red Team + 📊 Confidence Map. Cost: ~$0.20-1.00.
+
+CODE AUDIT (professional level)
+→ 💻 Code Review + 📦 Big Project + best models. Cost: ~$0.30-2.00.
+
+BOOK READING
+→ 📖 Big Text + Gemini as reader. Cost: ~$0.05 for reading + cents for questions.
+
+FREE MODELS AS FIRST TIER:
+
+Strategy "free first-level consilium":
+
+1. Assemble consilium of 🆓 models: DeepSeek R1, DeepSeek V3, Qwen3 Coder, Llama 4 Maverick, Gemma 3
+2. One paid moderator: Claude Sonnet 4.6
+3. Ask first iteration
+4. If result satisfied — great, spent pennies
+5. If not — switch to paid consilium
+
+This way 80% of tasks are solved on free models.
+
+
+╔══════════════════════════════════════════════╗
+║  PART XIV. TROUBLESHOOTING                    ║
+╚══════════════════════════════════════════════╝
+
+▓▓▓ 23. FAQ AND ERROR RESOLUTION ▓▓▓
+
+"Insufficient credits" error
+→ OpenRouter balance ended. Top up or switch to 🆓 models.
+
+"Rate limit exceeded" error
+→ Requests per minute limit exceeded. Wait a bit or switch key.
+
+"Model not found" error
+→ Typo in model ID or model removed. Check at openrouter.ai/models.
+
+Egregor takes long to start
+→ First launch 5-7 sec — normal (loading React DevTools). After .exe build will be 2-3 sec.
+
+Input field "freezes" when attaching large archive
+→ Big Project indexing in progress. Wait ~30 seconds — Egregor is working.
+
+Buttons not visible in header
+→ Window too narrow. Expand or use adaptive mode (buttons wrap to second row).
+
+Free models not working
+→ Free models have limits ~20 requests/min, ~200/day per key. Use two keys (see 4.4).
+
+Chat became slow/expensive to answer
+→ Context grew. Enable 📚 Compression or start a new project.
+
+Big Project doesn't index
+→ Check archive contains code files (supported extensions). If many js/ts in archive — possibly file limit (500) or size (50 MB) exceeded.
+
+PDF doesn't parse
+→ Check pdf-parse installed: npm install pdf-parse@1.1.1. Drag-and-drop PDF on Windows may bug — use 📎.
+
+Drag-and-drop archives on Windows doesn't work
+→ Known Electron 32+ bug. Use 📎 button instead of drag.
+
+Project disappeared
+→ Data in browser localStorage. Regularly use "Save to file" for backup.
+
+═══════════════════════════════════════════════════
+END OF GUIDE. Version 1.1 | Vladislav Shter
+═══════════════════════════════════════════════════
