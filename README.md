@@ -319,7 +319,7 @@ This isn't a chatbot wrapper. This is the **first production-ready AI Council** 
 
 ## 🚀 Status
 
-**Version 1.1 — Production-ready MVP**
+**Version 1.1 — Product ready**
 
 Currently in active development. Solo founder seeking:
 - 🤝 Investors who understand multi-AI architecture
