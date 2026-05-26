@@ -1,6 +1,9 @@
 # 🧠 EGREGOR
 
 ## The First Multi-AI Consilium That Beats Mythos and Gemini Ultra — On YOUR Computer
+<p align="center">
+  <img src="assets/1.gif" alt="Egregor" width="800"/>
+</p>
 
 > **The top AI models admit it themselves:** *"When properly configured, Egregor produces results stronger than the most expensive single AI model on the market."*
 >
