@@ -63,7 +63,7 @@ Modern AI models have **systematic blind spots**:
 
 When 5 specialized models analyze your problem and a **Moderator** synthesizes the result while a **Devil's Advocate** attacks the consensus — the failure rate drops to 2-5%.
 
-**That's the many performance gain.** Validated by independent benchmarks and by the AI models themselves when asked to evaluate Egregor's output quality vs single-model output.
+**That's the many performance gain.** the AI models themselves when asked to evaluate Egregor's output quality vs single-model output.
 
 ---
 
