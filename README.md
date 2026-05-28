@@ -90,6 +90,8 @@ A strict 5-step sequential pipeline where each AI is a specialist:
 CertiK charges **$5,000-50,000** for the same audit.
 
 Egregor doesn't replace CertiK for $50M protocols. But for indie projects, hackathons, hobby contracts, learning, and pre-audit checks — it's a **revolution**.
+> 📋 **See it in action:** [Real Audit Case Study](./REAL-AUDIT-CASE-STUDY.md) — 
+> 4 critical vulnerabilities that Claude and Gemini missed alone, found by the consilium.
 
 ### 📦 Big Project Mode — Entire Codebase Analysis
 
