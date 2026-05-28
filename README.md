@@ -1,4 +1,9 @@
 # 🧠 EGREGOR
+[![Stars](https://img.shields.io/github/stars/VladislavShter/Egregor?style=flat-square&color=gold)](https://github.com/VladislavShter/Egregor/stargazers)
+[![Forks](https://img.shields.io/github/forks/VladislavShter/Egregor?style=flat-square&color=blue)](https://github.com/VladislavShter/Egregor/network/members)
+[![License](https://img.shields.io/github/license/VladislavShter/Egregor?style=flat-square&color=green)](https://github.com/VladislavShter/Egregor/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/VladislavShter/Egregor?style=flat-square&color=orange)](https://github.com/VladislavShter/Egregor/commits/main)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square)](https://github.com/VladislavShter/Egregor)
 
 ## The First Multi-AI Consilium That Beats Mythos and Gemini Ultra — On YOUR Computer
 <p align="center">
