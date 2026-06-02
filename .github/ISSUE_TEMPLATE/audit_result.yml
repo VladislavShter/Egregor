@@ -1,0 +1,43 @@
+name: 🏆 Share an Audit Result
+description: Found a bug in a contract using Egregor? Share your success story!
+title: "[Audit]: "
+labels: ["showcase"]
+body:
+  - type: markdown
+    attributes:
+      value: "Egregor caught something a single AI missed? We'd love to feature your story. Please don't post live exploit details for un-fixed contracts — describe the class of issue instead."
+  - type: input
+    id: contract-type
+    attributes:
+      label: What kind of contract / code?
+      placeholder: "e.g. ERC-20 token, DeFi vault, NFT mint"
+    validations:
+      required: true
+  - type: textarea
+    id: findings
+    attributes:
+      label: What did the consilium find?
+      description: Describe the class of vulnerability or issue (no live exploit code, please).
+      placeholder: "Egregor flagged a reentrancy risk in ... that I had missed."
+    validations:
+      required: true
+  - type: input
+    id: models
+    attributes:
+      label: Which models / pipeline did you use?
+      placeholder: "e.g. Code Review Pipeline: DeepSeek → Sonnet → Qwen → Opus"
+  - type: input
+    id: cost
+    attributes:
+      label: Approximate cost of the audit?
+      placeholder: "e.g. $0.40"
+  - type: dropdown
+    id: permission
+    attributes:
+      label: May we feature this story (anonymously if you prefer)?
+      options:
+        - "Yes, you can feature it"
+        - "Yes, but keep me anonymous"
+        - "No, just sharing for feedback"
+    validations:
+      required: true
