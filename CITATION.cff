@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Egregor: A Multi-AI Consilium Platform for Collaborative Reasoning, Code Review, and Security Auditing"
+message: "If you use Egregor in your research or project, please cite it as below."
+type: software
+authors:
+  - family-names: "Shter"
+    given-names: "Vladislav"
+repository-code: "https://github.com/VladislavShter/Egregor"
+url: "https://github.com/VladislavShter/Egregor"
+abstract: "Egregor is a local-first desktop platform that orchestrates Claude, GPT, Gemini, DeepSeek and 300+ models via OpenRouter into a structured multi-AI consilium with Anti-Groupthink protocols, role-based participation, a Code Review pipeline for smart-contract auditing, and a Confidence Map."
+keywords:
+  - multi-ai
+  - ai-agents
+  - ai-consilium
+  - smart-contract-audit
+  - local-llm
+  - data-sovereignty
+  - electron
+  - openrouter
+license: Apache-2.0
+version: "1.1"
+date-released: "2026-06-02"
