@@ -1,0 +1,46 @@
+name: 🐛 Bug Report
+description: Report a problem with Egregor
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for taking the time to report a bug. Please fill in the details below."
+  - type: input
+    id: version
+    attributes:
+      label: Egregor version
+      placeholder: "e.g. 1.1 Pro"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+      placeholder: "When I clicked ... Egregor did ... but I expected ..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See error
+  - type: textarea
+    id: models
+    attributes:
+      label: Which AI models were in the consilium?
+      placeholder: "e.g. DeepSeek R1, Claude Sonnet, Qwen3 Coder"
