@@ -1,0 +1,40 @@
+name: 💡 Feature Request
+description: Suggest a new feature or improvement for Egregor
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "Have an idea to make Egregor better? Tell us about it."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the limitation or frustration you're facing.
+      placeholder: "Right now Egregor can't ... which means ..."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Your proposed solution
+      placeholder: "It would be great if Egregor could ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this relate to?
+      options:
+        - Consilium / roles
+        - Code Review / smart-contract audit
+        - Big Project / Big Text mode
+        - Anti-Groupthink / Confidence Map
+        - Localization / interface
+        - Models / OpenRouter
+        - Other
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      placeholder: "Examples, mockups, links — optional."
