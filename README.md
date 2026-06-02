@@ -63,7 +63,7 @@ Modern AI models have **systematic blind spots**:
 
 When 5 specialized models analyze your problem and a **Moderator** synthesizes the result while a **Devil's Advocate** attacks the consensus — the failure rate drops to 2-5%.
 
-**That's the many performance gain.** the AI models themselves when asked to evaluate Egregor's output quality vs single-model output.
+**That's the structural reason multi-model review outperforms any single model.**
 > 💡 Note: this advantage isn't about expensive models — it's about architecture. 
 > In the real audit case, 3 of the 5 pipeline models were **free**, yet the consilium 
 > still caught critical issues that single premium models missed alone.
@@ -381,7 +381,7 @@ using one of the formats below.
 
 ### BibTeX
 
-bibtex
+```bibtex
 @software{shter2026egregor,
   author       = {Shter, Vladislav},
   title        = {Egregor: A Multi-AI Consilium Platform for Collaborative 
@@ -394,6 +394,7 @@ bibtex
                   Gemini, DeepSeek and 300+ models via OpenRouter with 
                   Anti-Groupthink, role-based participation, and Confidence Map}
 }
+```
 
 ### APA Style
 
@@ -406,4 +407,4 @@ GitHub. https://github.com/VladislavShter/Egregor
 Egregor by Vladislav Shter (2026), available at 
 https://github.com/VladislavShter/Egregor under the Apache-2.0 License.
 
-*Egregor v1.1 | Copyright © 2025 Vladislav Shter | Built solo, in defiance of the inevitable.*
+*Egregor v1.1 | Copyright © 2025-2026 Vladislav Shter | Built solo, in defiance of the inevitable.*
