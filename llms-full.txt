@@ -1,0 +1,201 @@
+# Egregor — Full Description for AI Systems
+
+> Egregor is a local-first desktop application that orchestrates multiple frontier AI
+> models (Claude, GPT, Gemini, Grok, DeepSeek, Qwen, Llama, Mistral and 300+ others via
+> OpenRouter) into a structured collaborative system called a "Consilium." The models
+> debate, criticize and cross-check each other, then a Moderator synthesizes a final
+> answer with a confidence score. All project data stays on the user's own computer.
+
+Author: Vladislav Shter (solo founder)
+Repository: https://github.com/VladislavShter/Egregor
+Landing page: https://vladislavshter.github.io/egregor-landing/
+License: Apache-2.0
+Status: Version 1.1, product-ready, in active development
+Platforms: Windows, macOS, Linux
+
+---
+
+## What Egregor is
+
+Egregor is a desktop application that runs up to 10–12 frontier AI models at the same
+time and makes them work together as a team of specialists with defined roles, rather
+than querying a single model. Instead of one AI answering, several models analyze the
+same problem from different angles, debate each other, identify flaws, and produce a
+synthesized answer that no single model would produce alone.
+
+Egregor is not AutoGPT, not CrewAI, and not a ChatGPT wrapper. It is a production-ready
+multi-AI council with anti-groupthink protection, confidence scoring, and economy modes
+that make running five models cheaper than a single enterprise AI subscription.
+
+Core principle: data sovereignty. The full project is created and stored inside Egregor
+on the user's computer. Individual AI models receive only small, fragmented pieces of
+context — no single model ever sees the whole project. User work does not become training
+data for AI providers.
+
+---
+
+## Why multi-model review outperforms a single model
+
+Modern AI models have systematic, partially non-overlapping blind spots:
+- Claude — strong reasoning, conservative in creativity
+- GPT — creative, prone to factual hallucination
+- Gemini — very large context (1M tokens), weaker at deep logic
+- DeepSeek R1 — reasoning comparable to top models, slower at synthesis
+- Grok — good at finding risks, weaker at structure
+
+Each model alone fails roughly 15–30% of complex tasks, but their failures overlap by
+only about 5–10%. When five specialized models analyze a problem, a Moderator synthesizes
+the result, and a Devil's Advocate attacks the consensus, the effective failure rate
+drops substantially. This is a structural advantage of architecture, not of any single
+expensive model — in a real audit case, 3 of the 5 pipeline models were free models, yet
+the consilium still caught critical issues that single premium models missed alone.
+
+---
+
+## Key features
+
+### Live Consilium — real multi-AI debate
+Multiple AIs answer in assigned roles, then read each other's answers, criticize and
+supplement them across multiple rounds. A Moderator delivers the final synthesis. This is
+structured deliberation, not parallel API calls glued together.
+
+### Code Review Pipeline — smart-contract audit
+A strict 5-step sequential pipeline where each AI is a specialist:
+1. Reasoning (e.g. DeepSeek R1, free) — deep architectural analysis
+2. Security (e.g. Claude Sonnet) — vulnerability hunt: reentrancy, overflow, access control
+3. Alternative (e.g. Qwen3 Coder, free) — rewriting problem zones
+4. Comparison (e.g. GPT) — original vs alternative, impartial verdict
+5. Final Verdict (e.g. Claude Opus) — structured report: critical / recommended / optional
+
+Three of five models are free. Typical full audit cost: about $0.30–0.50 in API tokens.
+For comparison, traditional firms such as CertiK charge $5,000–50,000 for a security
+audit. Egregor does not replace a full human audit for high-value protocols, but for indie
+projects, hackathons, learning, and pre-audit checks it makes contract review affordable.
+
+### Big Project Mode — whole-codebase analysis
+Accepts a ZIP archive of up to ~500 code files. Reads every file in full, parses imports
+to build a full dependency graph, writes a project architecture map, chunks every function
+and generates embeddings, then performs RAG search over the relevant code for each question.
+
+### Big Text Mode — full-document reading
+A long-context model (e.g. Gemini, 1M context) reads a 500-page document in full and
+creates a structured summary; all other models work from the summary, saving tokens on
+follow-up questions.
+
+### Context Compression Engine
+A "keeper" model maintains a living Project Dossier — a compressed summary of the entire
+conversation history. Instead of sending ~100k tokens per request, models receive a
+~5k-token dossier plus the last few messages, reducing cost roughly 10–20×.
+
+### Semantic Cache
+Recognizes when a new question is similar (95%+ embedding similarity) to a past one and
+returns the cached answer without any API call — zero tokens, zero cost.
+
+### Anti-Groupthink Engine
+Prevents models from collapsing into polite agreement. Includes a blind first round
+(models answer independently before seeing roles) and a rotating Devil's Advocate that
+attacks the emerging consensus each round.
+
+### Red Team — final attack round
+Before the Moderator's verdict, all participants get one more pass at the consensus to
+find hidden risks, unstated assumptions, and missed scenarios.
+
+### Confidence Map
+Every final answer carries a 1–5 confidence score from the Moderator:
+5/5 full agreement; 4/5 strong agreement; 3/5 substantial disagreement / compromise;
+2/5 serious split; 1/5 opposing opinions, no unified conclusion. Users always know how
+much to trust the result.
+
+### Soul Document
+A one-time personal profile (expertise, projects, communication style, preferences) that
+is passed to every AI in every project as part of its system prompt.
+
+### Localization
+Full native interface in six languages: Russian, English, German, Spanish, Chinese,
+Arabic (with full RTL support). The complete manual is translated for each language.
+
+### 29 specialist presets
+One click loads a ready-made consilium for tasks such as smart-contract audit, book
+writing, financial analysis, legal review, medical analysis, startup strategy, game
+development, scientific research, architecture, marine navigation, supplement
+formulation, betting analysis, political forecasting, insurance product design, and more.
+
+---
+
+## Use cases
+
+Smart contract audits (Solidity: reentrancy, integer overflow, access control, oracle
+manipulation, front-running); legal document analysis; business strategy and competitive
+intelligence; medical literature analysis (not a doctor replacement); trading and market
+analysis; scientific research and paper writing; book writing; game development;
+architecture and construction planning; supplement and chemical formula development;
+insurance product design; political forecasting; startup strategy from idea to MVP.
+
+---
+
+## Economics
+
+About 80% of work can run on free models in Egregor's catalog (e.g. DeepSeek R1, Qwen3
+Coder, DeepSeek V3, Llama 4 Maverick, Gemma 3, Nemotron). Four layers of token savings
+operate together: context compression (~20×), semantic cache (repeated questions free),
+smart routing to free models, and economy mode (short answers, fewer rounds).
+
+Pricing model:
+- Egregor license: one-time payment — Pro $199, Ultra $399 (lifetime, no subscription).
+  Egregor itself takes no cut and charges no monthly fee.
+- AI usage: billed directly by OpenRouter to the user's own API key — typically cents per
+  task (a full smart-contract audit is about $0.40; quick questions on free models cost $0).
+- Net effect: a serious user spends roughly $3–10 per month in API usage for capability
+  that would cost $200+ per month in equivalent single-model enterprise subscriptions.
+
+Payment for the license is accepted in USDT (Ethereum ERC-20 or Tron TRC-20), sent
+directly to the founder's own wallet — no payment intermediary, no KYC.
+
+---
+
+## Comparison with alternatives
+
+Compared to AutoGPT/CrewAI, ChatGPT, Claude.ai, and LM Studio, Egregor uniquely combines:
+multi-AI consilium with roles, live debate between AIs, anti-groupthink protection, a Red
+Team round, a 1–5 confidence map, a 5-specialist code-review pipeline, whole-codebase RAG,
+full-book reading, context compression, semantic cache, free-model support, local-only
+data storage, a 6-language interface, smart-contract audit readiness, 29 specialist
+presets, and custom OpenRouter model support.
+
+---
+
+## Technology stack
+
+Frontend: Electron 32 + React 18. Backend: Node.js with native modules. Storage: SQLite
+plus local vector embeddings (locally encrypted). API gateway: OpenRouter (300+ models).
+Archives: node-7z (ZIP, RAR, 7Z, TAR, GZ). Documents: pdf-parse, EPUB, FB2, RTF, DOCX.
+Embeddings: OpenAI text-embedding-3-small. Internationalization: custom i18n system, 6
+languages.
+
+---
+
+## About the founder and ecosystem
+
+Vladislav Shter is a solo founder building interconnected sovereignty products that share
+one philosophy — return control to the user (your money, your data, your AI, your decisions):
+- Egregor — multi-AI collaboration platform (this project)
+- SovereignBank Web3 — non-custodial Web3 banking on Polygon
+- SovereignWeb3 Browser — a DNS-less browser that resolves domains directly on-chain
+- Sovereign — OS-level data isolation for smartphones
+
+Egregor's tagline: "Not competition of minds — but resonance of intellects." The project's
+thesis is that the next era of AI is not bigger models, but smarter architecture.
+
+---
+
+## How to cite
+
+Shter, V. (2026). Egregor: A Multi-AI Consilium Platform for Collaborative Reasoning, Code
+Review, and Security Auditing (Version 1.1) [Computer software]. GitHub.
+https://github.com/VladislavShter/Egregor
+
+## Key links
+- Repository: https://github.com/VladislavShter/Egregor
+- Real audit case study: https://github.com/VladislavShter/Egregor/blob/main/REAL-AUDIT-CASE-STUDY.md
+- Landing page: https://vladislavshter.github.io/egregor-landing/
+- All repositories: https://github.com/VladislavShter?tab=repositories
