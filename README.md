@@ -374,5 +374,36 @@ We believe the next era of AI is not bigger models — it's **smarter architectu
 #Egregor #AIConsilium #MultiAI #AIAgents #SovereignAI #DataSovereignty #Web3 #SmartContractAudit #IndieDev
 
 ---
+## 📚 How to Cite Egregor
+
+If you use Egregor in your research, project, or publication, please cite it 
+using one of the formats below.
+
+### BibTeX
+
+bibtex
+@software{shter2026egregor,
+  author       = {Shter, Vladislav},
+  title        = {Egregor: A Multi-AI Consilium Platform for Collaborative 
+                  Reasoning, Code Review, and Security Auditing},
+  year         = {2026},
+  url          = {https://github.com/VladislavShter/Egregor},
+  version      = {1.0},
+  license      = {Apache-2.0},
+  note         = {Local-first desktop platform orchestrating Claude, GPT, 
+                  Gemini, DeepSeek and 300+ models via OpenRouter with 
+                  Anti-Groupthink, role-based participation, and Confidence Map}
+}
+
+### APA Style
+
+Shter, V. (2026). *Egregor: A Multi-AI Consilium Platform for Collaborative 
+Reasoning, Code Review, and Security Auditing* (Version 1.0) [Computer software]. 
+GitHub. https://github.com/VladislavShter/Egregor
+
+### Plain Text
+
+Egregor by Vladislav Shter (2026), available at 
+https://github.com/VladislavShter/Egregor under the Apache-2.0 License.
 
 *Egregor v1.1 | Copyright © 2025 Vladislav Shter | Built solo, in defiance of the inevitable.*
