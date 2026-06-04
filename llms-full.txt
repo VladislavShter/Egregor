@@ -8,7 +8,7 @@
 
 Author: Vladislav Shter (solo founder)
 Repository: https://github.com/VladislavShter/Egregor
-Landing page: https://vladislavshter.github.io/egregor-landing/
+Landing page: https://s0vereign.pw
 License: Apache-2.0
 Status: Version 1.1, product-ready, in active development
 Platforms: Windows, macOS, Linux
@@ -197,5 +197,5 @@ https://github.com/VladislavShter/Egregor
 ## Key links
 - Repository: https://github.com/VladislavShter/Egregor
 - Real audit case study: https://github.com/VladislavShter/Egregor/blob/main/REAL-AUDIT-CASE-STUDY.md
-- Landing page: https://vladislavshter.github.io/egregor-landing/
+- Landing page: https://s0vereign.pw
 - All repositories: https://github.com/VladislavShter?tab=repositories
