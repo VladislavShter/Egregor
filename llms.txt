@@ -20,6 +20,7 @@ Key differentiators:
 ## About
 - [Founder](https://github.com/VladislavShter): Vladislav Shter, solo founder of Egregor and SovereignBank Web3
 - [License](https://github.com/VladislavShter/Egregor/blob/main/LICENSE): Apache-2.0
+- [Official site](https://s0vereign.pw): Landing page for the Sovereign ecosystem (Egregor, Browser, Sovereign)
 
 ## Topics
 multi-ai, ai-agents, ai-consilium, smart-contract-audit, local-llm, data-sovereignty, electron, openrouter, anti-groupthink
