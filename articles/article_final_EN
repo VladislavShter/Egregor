@@ -1,1 +1,100 @@
+5 top AI models told me my smart contract was flawless. So I made them work together — and they found 4 critical bugs.
+
+I spent weeks auditing the smart contracts behind my Web3 banking project, SovereignBank Web3, the way most people audit code with AI today: one model at a time. This is the full story, including the mechanics — how the manual process actually worked, and what a structured run did differently.
+
+
+The thirteen manual audits
+
+The target was a modular contract set: a parent, SovereignBankPro.sol, and its children — SovereignAutoPay.sol, SovereignCashback.sol, SovereignMath.sol, SovereignTimelock.sol, SovereignVaults.sol — plus the full test folder and a clean compile with all 83 tests passing.
+
+Because not every model accepts an archive, I put everything into one text document: the folder and file structure at the top, the technical stack, then every contract's source, then the tests. Before each audit I asked the model one thing first — "is the information about this contract clear to you?" — and only began once it confirmed.
+
+For every single-model audit I used exactly one prompt, the same for all five models: roughly "this is the SovereignBankWeb3 smart contract, here's the folder/file structure and tech stack — audit it, find bugs and vulnerabilities, write fix instructions, and suggest improvements." One prompt. The five models were Gemini Pro, DeepSeek, ChatGPT, Grok and Claude Opus.
+
+Then I did the consolidation by hand. I collected all five audits into another text document, strictly structured — which model said what — and it ran large, on the order of 4,000 to 6,000 lines. I handed that document to Gemini Pro and to Claude separately, and each produced a consolidated report. Now I had two summaries. So I sent Claude's report to Gemini and Gemini's report to Claude for a cross-check, until I was left with one merged verdict: a single consolidated audit with issues, vulnerabilities and fix recommendations.
+
+Then I went into the code, applied the fixes — and started over. Five fresh audits, manual consolidation, cross-check, one verdict. Thirteen times.
+
+What frustrated me was that the models never found everything in one pass. Every round surfaced something new. The count went down each time, and by around the tenth audit, three of the five models were telling me the contract was clean. "No critical vulnerabilities." "Well-structured." "Production-ready." Five of the best AI models on the planet, converging on agreement.
+
+They were wrong. And I only found out because I stopped asking them one at a time.
+
+
+Why this was the wrong tool, even though it worked
+
+Look at what that process actually was: I was manually playing the role of a moderator orchestrating a council. The copy-paste, the structuring, the cross-checking between Gemini and Claude — I was being the pipeline, by hand, thirteen times. One prompt times five models times thirteen rounds. Written down, it's almost funny.
+
+That's the itch the tool was built to scratch.
+
+
+What a structured run does differently
+
+After building Egregor — a local-first desktop app that makes multiple models work together as a structured council instead of answering alone — I ran the same contract through it one more time.
+
+A single smart-contract audit in Egregor's Code Review mode already uses at least ten prompts, and that's economy mode. Here's the mechanic. Code Review mode loads a preset of five models, each in its own role — five prompts to start. A "role" here is a sandbox with its own prompt; a model dropped into that role works according to it, and the prompt can shift if you toggle a function like compression, economy, or sequential mode. Roles can be assigned automatically by a preset, or you drag a model under the role you want. Turn on Anti-Groupthink and you add two more prompts and the models rotate roles — genuine collaboration, not parallel calls glued together. Turn on Red Team and you add another consensus round with another role rotation. Now you're past ten prompts, with five models in five roles. And you can go further: up to twelve roles, each with its own prompt, and more than one model per role. For an audit, five or six models is plenty — then you can rotate their roles and run a second pass.
+
+I won't publish the contents of those role prompts — that's the intellectual property of the tool. But I'll describe the part that took the most work: getting the models to actually be critical. Every major model is trained to agree politely and to praise; only Grok would happily be rude about it. So two rules were baked into the role prompts: first, do not agree with another participant until they present facts and evidence; second, go and verify those facts yourself. That second rule matters because — a real example from these runs — Gemini would sometimes present facts that simply did not exist.
+
+The run itself is something you watch in real time. You drop the contract folder or archive into Egregor (it makes the whole contents legible to the models), configure the audit, and press start — just like a normal chat window. Immediately a list of the participating models appears and pulses as they think and prepare answers. When the round finishes, every model's answer groups into a card you can open, read in full, copy and save. Then the next round, and the next — the count depends on your settings and which modes are on. At the end, a moderator forms the final verdict. You can watch a real run here: https://youtu.be/y8oZdDBQYhc
+
+
+What it found, including the part that broke
+
+I want to be honest about exactly what happened in this run, because the honesty is the point.
+
+This council was deliberately modest, and three of the five models were free — not an expensive setup. The pipeline has five steps. Step 1, the deep architectural analysis, did not complete: it failed with a fetch error. That failure was on OpenRouter's side, not the tool's; Egregor simply recorded the gap and reported it in the final verdict instead of hiding it. The run continued on steps 2 through 5.
+
+And still — even with a broken first step and mostly free models — it surfaced four critical issues that the single models, by the thirteenth manual iteration, had stopped seeing.
+
+First, a reentrancy risk in executeAutoPay, present even with a nonReentrant modifier, because external token transfers sat right next to state changes. The fix: move all state changes before the external call, then verify a balance invariant after it.
+
+Second, missing input validation in createStandingOrder — no checks on amount, interval or recipient, which opened a denial-of-service vector and allowed the creation of non-functional orders.
+
+Third, weak stablecoin verification in initialize — a try/catch that silently swallowed token-compatibility errors instead of rejecting non-standard tokens.
+
+Fourth, permanent deployer privileges — admin roles were never delegated to the timelock, leaving the deployer with permanent control. An architectural risk, not a typo. Exactly the kind a single model skims past.
+
+Here is the validation fix, as an example of how concrete the findings were:
+
+    function createStandingOrder(
+        address _recipient,
+        uint256 _amount,
+        uint256 _interval
+    ) external {
+        if (_recipient == address(0)) revert ZeroAddress();
+        if (_amount == 0) revert ZeroAmount();
+        if (_interval < 1 days || _interval > 365 days) revert InvalidInterval();
+        if (users[msg.sender].balance < _amount) revert InsufficientBalance();
+        // ...
+    }
+
+
+The part that actually earned my trust
+
+The council didn't just produce findings. It also declared what it had not checked, marking several functions — emergencyWithdrawFull, claimInheritance, finalizeRecovery — as "not deeply audited, requires a separate pass."
+
+That honesty is the whole point, and you could see it in the disagreement between steps. One step produced a broad list of ten items, but several were unconfirmed hypotheses written without reading the actual functions. A later comparison step threw those out as noise and kept only what was verified in code. A single model either drowns you in unverified guesses or hands you a handful of findings with no cross-check. The council separated confirmed bugs from noise — and drew a map of its own uncertainty.
+
+
+Why this works (the boring, real reason)
+
+It isn't magic, and it isn't about one expensive model being smart. Modern AI models have systematic blind spots that only partly overlap. Each one misses a meaningful share of hard problems — but they don't miss the same things.
+
+When several models analyze the same code, then read and attack each other's conclusions, the gaps stop lining up. What one skips, another catches. What one hallucinates, another rejects — especially once they're required to verify before agreeing. Thirteen solo passes converged on a false "it's clean" precisely because each model, alone, was agreeable and confident. A structured run — even with a broken step and mostly free models — did not.
+
+
+The cost
+
+The whole audit run cost about forty cents in API tokens, because three of the five models were free and you pay only for what the paid ones consume, billed directly to your own API key with no middleman. A traditional firm charges thousands for a comparable pass. Egregor doesn't replace a full human audit for a fifty-million-dollar protocol — but for indie developers, hackathons, learning and pre-audit checks, it changes the math entirely.
+
+
+Who's behind this
+
+I'm Vladislav Shter, a solo founder building a small ecosystem of tools around one idea — sovereignty: that you, not a corporation, should control your data, your money and your AI. Egregor is the multi-AI council described here; it also runs 28 other expert presets beyond code review. There's also SovereignBank Web3, the non-custodial banking project whose contract you just read about; SovereignWeb3 Browser, a DNS-less browser that resolves domains on-chain; and Sovereign, OS-level data isolation for phones.
+
+Egregor runs on your own machine, supports free and paid models through OpenRouter, and is built on one belief: the next leap in AI isn't a bigger model — it's smarter architecture. Make the models you already have work together, and they catch what any one of them, alone, would swear isn't there.
+
+Try it, or read the full audit, source and docs: github.com/VladislavShter/Egregor  , https://s0vereign.pw
+
+A single AI tells you the contract is clean. A council tells you where it actually isn't — and where it didn't look.
 
