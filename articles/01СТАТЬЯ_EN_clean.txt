@@ -1,0 +1,86 @@
+5 top AI models told me my smart contract was flawless. Then I made them work together — and they found 4 critical bugs.
+
+
+I spent weeks auditing the smart contracts behind my Web3 banking project, SovereignBank Web3, the way most people audit code with AI today: one model at a time.
+
+I ran the contracts through Claude Opus, Gemini Ultra, ChatGPT, DeepSeek and Grok — individually. Each one found small issues. I fixed them. I ran another pass. More small fixes. I did this thirteen times.
+
+By the end, every single model agreed: the contract was clean. "No critical vulnerabilities." "Well-structured." "Production-ready." Five of the best AI models on the planet, in agreement.
+
+They were wrong. And I only found out because I stopped asking them one at a time.
+
+
+The experiment
+
+After building Egregor — a desktop tool that makes multiple AI models work together as a structured council instead of answering alone — I ran the same contract through it one more time.
+
+The council for this run was deliberately modest. Two paid models, Claude Opus 4.6 and Gemini Pro, alongside three free ones: DeepSeek R1, Qwen3 Coder and Llama.
+
+I want to be honest about how light this audit was, because it matters. Three of the five models were free. I didn't assign specialized roles or set up real collaboration — it was a basic run. And the number of debate rounds was minimal.
+
+This was the shallow, entry-level version of what the tool can do. And it still surfaced four critical issues that thirteen rounds of solo audits had missed.
+
+
+What it found
+
+The same models that had declared the contract "flawless" — now reading and challenging each other's output — flagged four things.
+
+First, a reentrancy risk in executeAutoPay, present even with a nonReentrant modifier, because external token transfers sat right next to state changes. The fix was to move all state changes before the external call, then verify a balance invariant after it.
+
+Second, missing input validation in createStandingOrder — no checks on amount, interval or recipient, which opened a denial-of-service vector and allowed the creation of non-functional orders.
+
+Third, weak stablecoin verification in initialize — a try/catch that silently swallowed token-compatibility errors instead of rejecting non-standard tokens.
+
+Fourth, permanent deployer privileges — admin roles were never delegated to the timelock, leaving the deployer with permanent control. An architectural risk, not a typo. Exactly the kind a single model skims past.
+
+Here is the validation fix, as an example of how concrete the findings were:
+
+    function createStandingOrder(
+        address _recipient,
+        uint256 _amount,
+        uint256 _interval
+    ) external {
+        if (_recipient == address(0)) revert ZeroAddress();
+        if (_amount == 0) revert ZeroAmount();
+        if (_interval < 1 days || _interval > 365 days) revert InvalidInterval();
+        if (users[msg.sender].balance < _amount) revert InsufficientBalance();
+        // ...
+    }
+
+
+The part that actually earned my trust
+
+The council didn't just produce findings. It also declared what it had not checked, marking several functions — emergencyWithdrawFull, claimInheritance, finalizeRecovery — as "not deeply audited, requires a separate pass."
+
+That honesty is the whole point. One step of the pipeline produced ten findings, but half were unconfirmed hypotheses, written without reading the actual functions. A later step threw those out as noise and kept only what was verified in code.
+
+A single model either drowns you in unverified guesses or gives you a handful of findings with no cross-check. The council separated confirmed bugs from noise — and drew a map of its own uncertainty.
+
+
+Why this works (the boring, real reason)
+
+It isn't magic, and it isn't about one expensive model being smart. Modern AI models have systematic blind spots that only partly overlap. Each one misses fifteen to thirty percent of hard problems — but they don't miss the same things.
+
+When five models analyze the same code, then read and attack each other's conclusions, the gaps stop lining up. What one skips, another catches. What one hallucinates, another rejects. The result is qualitatively different from five separate answers stapled together.
+
+That is why thirteen solo passes converged on a false "it's perfect," while a single structured council run did not.
+
+
+The cost
+
+The entire audit run cost about forty cents in API tokens — because three of the five models were free, and you pay only for what the paid ones consume, billed directly to your own API key with no middleman. A traditional firm charges thousands for a comparable security pass.
+
+Egregor doesn't replace a full human audit for a fifty-million-dollar protocol. But for indie developers, hackathons, learning, and pre-audit checks, it changes the math entirely.
+
+
+Who's behind this
+
+I'm Vladislav Shter, a solo founder building a small ecosystem of tools around one idea — sovereignty: that you, not a corporation, should control your data, your money and your AI.
+
+There's Egregor, the multi-AI council described here, available now. SovereignBank Web3, the non-custodial banking project whose contract you just read about. SovereignWeb3 Browser, a DNS-less browser that resolves domains on-chain. And Sovereign, OS-level data isolation for phones.
+
+Egregor is built on one belief: the next leap in AI isn't a bigger model — it's smarter architecture. Make the models you already have work together, and they catch what any one of them, alone, would swear isn't there.
+
+Try it, or read the full audit, at s0vereign.pw. Source and docs live at github.com/VladislavShter/Egregor.
+
+A single AI gives you an answer. A council gives you an answer — plus the map of its own uncertainty.

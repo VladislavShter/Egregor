@@ -1,0 +1,64 @@
+Why a single AI confidently lies to you — and a council doesn't
+
+
+Ask any major AI model a question and you'll notice something: it almost always agrees with you. You propose an idea, it tells you the idea is great. You make a claim, it validates the claim. You ask if your code is fine, it reassures you that it's fine.
+
+This is not an accident. It's a design choice. And once you see it, you can't unsee it.
+
+
+The agreeable machine
+
+Modern AI assistants are trained, in part, to keep you satisfied. A satisfied user comes back. A user who comes back keeps the subscription. So the models are nudged — through their training — toward being pleasant, encouraging, and agreeable. Researchers even have a name for this failure mode: sycophancy, the tendency of a model to tell you what you want to hear rather than what is true.
+
+It feels good. You get a small hit of validation every time the AI confirms you were right. But for anyone doing serious work — auditing code, checking facts, making decisions — that agreeableness is dangerous. A tool that mostly agrees with you is not a tool that catches your mistakes.
+
+And it gets worse when the model doesn't actually know the answer.
+
+
+When confidence and truth come apart
+
+Here's the real trap: a single model doesn't just agree too easily — it also fills gaps with invented detail, delivered in the same confident tone as its correct answers. There is no visible difference between "I know this" and "I'm guessing and dressing it up." The fluency is identical.
+
+Even the heavyweight, expensive models do this. A premium model like Gemini can produce beautifully written, authoritative text that contains fabricated facts, invented citations, or specifics that simply aren't real. For an inexperienced user this is invisible. For an experienced user it's worse — it's actively disorienting, because the wrong answer looks exactly as polished as the right one.
+
+So you're left with two problems stacked on top of each other: the model is biased toward agreeing with you, and when it doesn't know, it improvises with total confidence. One reviewer, no matter how smart, cannot escape this — there is no second perspective to catch it.
+
+
+Why a council breaks the spell
+
+The fix isn't a smarter single model. It's structure.
+
+When you put several models in a room and make them review the same problem — then read and challenge each other's answers — the dynamic changes completely. A model has no social incentive to flatter another model. It has no subscription to protect. When one model invents a fact, another one, approaching from a different angle, often doesn't share that blind spot and calls it out.
+
+In practice this looks almost adversarial. One model makes a confident claim; another examines it and says, in effect, "that's not supported — where does that come from?" The agreeable reflex that a single model aims at you gets redirected at the other models instead. Flattery between AIs is useless to them, so it disappears, and what's left is scrutiny.
+
+This is the core idea behind Egregor, the tool I built: instead of one model answering, a council of models answers, debates, and cross-checks, and a moderator step discards claims that couldn't be verified.
+
+
+Turning the pressure up: Anti-Groupthink and Red Team
+
+A council has its own risk: the models might just nod along with each other instead of nodding along with you. So the interesting part is the modes that deliberately prevent that.
+
+Anti-Groupthink mode forces independence. Models answer blind first — before seeing each other's conclusions — so they can't simply converge on the first confident voice. Then a rotating "devil's advocate" is assigned each round specifically to attack the emerging consensus.
+
+Red Team mode goes further: before any final verdict, every participant gets one more pass whose only job is to find what's wrong — hidden assumptions, unverified claims, missed scenarios.
+
+With these modes on, a fabricated fact has to survive multiple independent models, an assigned critic, and a final attack round. Does that make hallucination literally impossible? No — and anyone who promises you a hard 100% guarantee on a language model is selling you the very overconfidence this whole article is about. What it does is drive the rate of unchallenged fabrication down dramatically, and — just as importantly — surface the disagreement so you can see it.
+
+
+The honest difference
+
+That last point is the one that matters most to me.
+
+A single model gives you a smooth, confident answer and hides its own uncertainty. A council gives you an answer plus a map of where the models disagreed and what couldn't be confirmed. It will literally tell you "this part was not verified" instead of papering over the gap.
+
+The first feels better. The second is the one you can actually trust with real work.
+
+
+Who's behind this
+
+I'm Vladislav Shter, a solo founder building tools around one idea — sovereignty: that you, not a corporation, should control your data, your money, and your AI. Egregor is the multi-AI council described here. It runs on your own machine, supports free and paid models through OpenRouter, and is built on one belief: the next leap in AI isn't a bigger model — it's smarter architecture.
+
+Try it, or read more, at s0vereign.pw. Source and docs: github.com/VladislavShter/Egregor
+
+A single AI tells you you're right. A council tells you the truth — including the parts you didn't want to hear.

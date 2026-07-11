@@ -1,0 +1,35 @@
+Ihre Daten trainieren fremde KI-Modelle. Ich habe ein Werkzeug gebaut, das das beendet.
+
+Jedes Mal, wenn Sie Ihren Code, Ihren Geschäftsplan oder Ihren Vertrag in einen Cloud-Chatbot eingeben, geben Sie etwas ab: Ihre Arbeit wird zu deren Trainingsmaterial. Ihre Ideen werden zu deren Vermögenswerten. Für viele Menschen ist das ein abstraktes Problem. In Deutschland, wo Datenschutz und digitale Souveränität seit jeher ernst genommen werden, ist es das nicht.
+Ich bin Vladislav Shter, Einzelgründer, und ich baue eine kleine Werkzeug-Familie rund um einen einzigen Gedanken: Souveränität. Sie, nicht ein Konzern, sollten die Kontrolle über Ihre Daten, Ihr Geld und Ihre KI haben. Dieser Artikel handelt vom ersten dieser Werkzeuge — Egregor.
+Das eigentliche Problem ist nicht nur Datenschutz
+Wenn Sie eine einzelne KI nach einer wichtigen Entscheidung fragen, treffen Sie zwei Wetten gleichzeitig. Die erste: dass Ihre Daten nicht anderweitig verwendet werden. Die zweite, weniger beachtete: dass das Modell überhaupt recht hat.
+Moderne KI-Modelle sind darauf trainiert, zuzustimmen. Sie loben Ihre Idee, bestätigen Ihre Annahme, versichern Ihnen, dass Ihr Code in Ordnung ist. Das fühlt sich gut an, ist aber gefährlich, sobald es um ernsthafte Arbeit geht. Und wenn ein Modell etwas nicht weiß, füllt es die Lücke mit erfundenen Details — im selben selbstsicheren Ton wie bei einer korrekten Antwort. Ein einzelner Prüfer, so klug er auch sein mag, kann dem nicht entkommen: Es gibt keine zweite Perspektive, die den Fehler auffängt.
+Was Egregor anders macht
+Egregor ist eine lokale Desktop-Anwendung, in der mehrere KI-Modelle als Konsilium arbeiten — als ein Rat. Statt dass eine einzelne KI antwortet, antworten mehrere, lesen die Ergebnisse der anderen und stellen sie infrage. Ein Modell hat keinen Grund, einem anderen Modell zu schmeicheln. Erfindet eines eine Tatsache, fängt ein anderes, das aus einem anderen Blickwinkel kommt, den Fehler oft ab.
+Drei Prinzipien halten den Rat ehrlich. Eine blinde erste Runde: Die Modelle antworten unabhängig, bevor sie die Schlüsse der anderen sehen — so entsteht keine höfliche Scheinübereinstimmung. Ein Anti-Groupthink-Modus mit einem rotierenden „Advocatus Diaboli", der jede Runde den entstehenden Konsens angreift. Und ein Red-Team-Modus, in dem vor jedem Endurteil alle Teilnehmer noch einmal gezielt nach Fehlern suchen. Am Ende erhalten Sie ein Urteil des Moderators mit einer Vertrauensbewertung von 1 bis 5 — Sie wissen also immer, wie sehr Sie dem Ergebnis trauen können.
+Souveränität als Architektur, nicht als Versprechen
+Der entscheidende Punkt: Ihr gesamtes Projekt wird lokal erstellt und bleibt auf Ihrem Rechner, innerhalb von Egregor. Die KI-Modelle erhalten nur kleine, fragmentierte Ausschnitte des Kontexts — streng nach dem Prinzip „so viel wie nötig, so wenig wie möglich". Kein einzelnes Modell sieht jemals das vollständige Bild. Nur Sie.
+Das ist keine Datenschutzerklärung, sondern eine architektonische Entscheidung. Ihr geistiges Eigentum bleibt Ihres.
+Die Ökonomie dahinter
+Egregor nutzt Ihren eigenen OpenRouter-Schlüssel, und ein Großteil der Arbeit lässt sich mit kostenlosen Modellen erledigen. Statt Hunderte Euro pro Monat für mehrere KI-Abonnements zu zahlen, bezahlen Sie nur, was die kostenpflichtigen Modelle tatsächlich verbrauchen — oft nur Cent pro Aufgabe. Ein vollständiger Prüfdurchlauf eines Smart Contracts kostete mich etwa 40 Cent, weil drei von fünf Modellen kostenlos waren.
+Nicht nur für Entwickler
+Der Smart-Contract-Audit ist die eindrucksvollste Demonstration, aber Egregor ist ein Generalist. Dasselbe Konsilium läuft mit 29 Experten-Voreinstellungen: Recherche, juristische und medizinische Analyse, Geschäftsstrategie, Buchprojekte, politische Prognosen und mehr. Überall dort, wo eine einzelne selbstsichere Antwort riskant ist, ist ein Rat, der laut widerspricht, die sicherere Wahl.
+Über den Autor und das Ökosystem
+Ich bin Vladislav Shter und baue das Sovereign-Ökosystem alleine — vier miteinander verbundene Produkte mit einer gemeinsamen Philosophie: die Kontrolle an den Nutzer zurückgeben.
+Egregor — die hier beschriebene Multi-KI-Plattform.
+SovereignBank Web3 — nicht-verwahrendes Web3-Banking auf Polygon.
+SovereignWeb3 Browser — ein DNS-loser Browser, der Domains direkt on-chain auflöst.
+Sovereign — Datenisolierung auf Betriebssystemebene für Smartphones.
+Egregor läuft auf Ihrem eigenen Rechner und beruht auf einer Überzeugung: Der nächste Sprung in der KI ist kein größeres Modell — es ist eine klügere Architektur.
+
+Das Ökosystem:                              https://s0vereign.pw
+Egregor kaufen:                              https://s0vereign.pw/#egregor
+Quellcode und Dokumentation:  https://github.com/VladislavShter/Egregor
+Demo-Video:                                   https://youtu.be/y8oZdDBQYhc
+Entwickler:                                      https://github.com/VladislavShter
+
+Eine einzelne KI sagt Ihnen, dass Sie recht haben. Ein Rat sagt Ihnen die Wahrheit — auch die Teile, die Sie nicht hören wollten.
+
+#KI,#kollektiveKI-Intelligenz,#KI-Rat
+

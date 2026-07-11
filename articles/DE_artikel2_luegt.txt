@@ -1,0 +1,63 @@
+Warum eine einzelne KI Ihnen selbstbewusst etwas vorlügt — und ein Rat nicht.
+
+Stellen Sie einer beliebigen großen KI eine Frage, und Ihnen wird etwas auffallen: Sie stimmt Ihnen fast immer zu. Sie schlagen eine Idee vor, sie findet die Idee großartig. Sie stellen eine Behauptung auf, sie bestätigt sie. Sie fragen, ob Ihr Code in Ordnung ist, sie versichert Ihnen, dass er es ist.
+
+Das ist kein Zufall. Es ist eine Design-Entscheidung. Und wer es einmal bemerkt hat, sieht es überall.
+
+
+Die gefällige Maschine
+
+Moderne KI-Assistenten werden unter anderem darauf trainiert, Sie zufriedenzustellen. Ein zufriedener Nutzer kommt wieder. Wer wiederkommt, behält das Abonnement. Also werden die Modelle durch ihr Training dazu angehalten, angenehm, ermutigend und zustimmend zu sein. Forscher haben sogar einen Namen für diesen Fehler: Sycophancy — die Neigung eines Modells, Ihnen zu sagen, was Sie hören wollen, statt was wahr ist.
+
+Es fühlt sich gut an. Jedes Mal, wenn die KI bestätigt, dass Sie recht hatten, bekommen Sie eine kleine Dosis Bestätigung. Aber für jeden, der ernsthaft arbeitet — Code prüfen, Fakten checken, Entscheidungen treffen — ist diese Gefälligkeit gefährlich. Ein Werkzeug, das Ihnen überwiegend zustimmt, ist kein Werkzeug, das Ihre Fehler findet.
+
+Und es wird schlimmer, wenn das Modell die Antwort gar nicht kennt.
+
+
+Wenn Selbstsicherheit und Wahrheit auseinanderfallen
+
+Hier liegt die eigentliche Falle: Ein einzelnes Modell stimmt nicht nur zu leicht zu — es füllt Lücken auch mit erfundenen Details, vorgetragen im selben selbstsicheren Ton wie seine korrekten Antworten. Es gibt keinen sichtbaren Unterschied zwischen „das weiß ich" und „ich rate und verpacke es schön". Die sprachliche Gewandtheit ist identisch.
+
+Selbst die schweren, teuren Modelle tun das. Ein Premium-Modell wie Gemini kann wunderschön geschriebenen, autoritativ klingenden Text produzieren, der erfundene Fakten, nicht existierende Quellen oder Details enthält, die es schlicht nicht gibt. Für einen unerfahrenen Nutzer ist das unsichtbar. Für einen erfahrenen ist es noch schlimmer — es verwirrt aktiv, weil die falsche Antwort genauso poliert aussieht wie die richtige.
+
+
+Warum ein Rat den Bann bricht
+
+Die Lösung ist kein klügeres Einzelmodell. Es ist Struktur.
+
+Wenn Sie mehrere Modelle dasselbe Problem prüfen lassen — und sie dann die Antworten der anderen lesen und infrage stellen —, ändert sich die Dynamik vollständig. Ein Modell hat keinen sozialen Anreiz, einem anderen Modell zu schmeicheln. Es hat kein Abonnement zu schützen. Erfindet ein Modell eine Tatsache, teilt ein anderes, das aus einem anderen Blickwinkel kommt, diesen blinden Fleck oft nicht — und benennt ihn.
+
+In der Praxis sieht das fast gegnerisch aus. Ein Modell stellt eine selbstsichere Behauptung auf; ein anderes prüft sie und sagt sinngemäß: „Das ist nicht belegt — woher stammt das?" Der gefällige Reflex, den ein Einzelmodell auf Sie richtet, wird auf die anderen Modelle umgelenkt. Schmeichelei zwischen KIs ist für sie nutzlos, also verschwindet sie — und übrig bleibt Prüfung.
+
+Genau das ist die Kernidee hinter Egregor, dem Werkzeug, das ich gebaut habe: Statt dass ein Modell antwortet, antwortet ein Rat von Modellen, diskutiert und überprüft sich gegenseitig, und ein Moderator-Schritt verwirft Behauptungen, die nicht bestätigt werden konnten.
+
+
+Den Druck erhöhen: Anti-Groupthink und Red Team
+
+Ein Rat hat sein eigenes Risiko: Die Modelle könnten einfach einander zunicken, statt Ihnen. Deshalb sind die Modi interessant, die genau das gezielt verhindern.
+
+Der Anti-Groupthink-Modus erzwingt Unabhängigkeit. Die Modelle antworten zuerst blind — bevor sie die Schlüsse der anderen sehen —, damit sie nicht einfach auf die erste selbstsichere Stimme einschwenken. Dann wird jede Runde ein „Advocatus Diaboli" bestimmt, dessen Aufgabe es ist, den entstehenden Konsens anzugreifen. Der Red-Team-Modus geht weiter: Vor jedem Endurteil macht jeder Teilnehmer einen weiteren Durchgang mit dem einzigen Ziel, zu finden, was falsch ist.
+
+Macht das Halluzinationen unmöglich? Nein — und wer Ihnen bei einem Sprachmodell eine harte 100-Prozent-Garantie verspricht, verkauft Ihnen genau die Selbstüberschätzung, um die es in diesem Artikel geht. Aber es senkt die Rate unwidersprochener Erfindungen drastisch und bringt — ebenso wichtig — die Meinungsverschiedenheit an die Oberfläche, damit Sie sie sehen können.
+
+
+Der ehrliche Unterschied
+
+Ein einzelnes Modell gibt Ihnen eine glatte, selbstsichere Antwort und verbirgt seine eigene Unsicherheit. Ein Rat gibt Ihnen eine Antwort plus eine Karte davon, wo die Modelle uneinig waren und was nicht bestätigt werden konnte. Er sagt Ihnen wörtlich „dieser Teil wurde nicht überprüft", statt die Lücke zu übertünchen.
+
+Das Erste fühlt sich besser an. Dem Zweiten können Sie ernsthafte Arbeit anvertrauen.
+
+
+Über den Autor und das Ökosystem
+
+Ich bin Vladislav Shter, Einzelgründer, und baue Werkzeuge rund um einen Gedanken — Souveränität: dass Sie, nicht ein Konzern, Ihre Daten, Ihr Geld und Ihre KI kontrollieren sollten. Egregor ist der hier beschriebene Multi-KI-Rat; neben dem Code-Review laufen 28 weitere Experten-Voreinstellungen. Dazu gehören außerdem SovereignBank Web3 (nicht-verwahrendes Web3-Banking), der SovereignWeb3 Browser (ein DNS-loser Browser) und Sovereign (Datenisolierung auf Betriebssystemebene für Smartphones).
+
+Egregor läuft auf Ihrem eigenen Rechner, unterstützt kostenlose und kostenpflichtige Modelle über OpenRouter und beruht auf einer Überzeugung: Der nächste Sprung in der KI ist kein größeres Modell — es ist eine klügere Architektur.
+
+Das Ökosystem: https://s0vereign.pw
+Egregor kaufen: https://s0vereign.pw/#egregor
+Quellcode und Dokumentation: https://github.com/VladislavShter/Egregor
+Demo-Video: https://youtu.be/y8oZdDBQYhc
+Entwickler: https://github.com/VladislavShter
+
+Eine einzelne KI sagt Ihnen, dass Sie recht haben. Ein Rat sagt Ihnen die Wahrheit — auch die Teile, die Sie nicht hören wollten.
